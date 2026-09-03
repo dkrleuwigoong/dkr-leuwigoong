@@ -93,7 +93,8 @@
             <a href="berita.html" class="block py-2 hover:text-brand-gold">Berita</a>
             <a href="galeri.html" class="block py-2 hover:text-brand-gold">Galeri</a>
             <a href="kontak.html" class="block py-2 hover:text-brand-gold">Kontak</a>
-            <a href="gabung.html" class="block text-center mt-3 py-2.5 bg-brand-gold text-brand-dark font-bold rounded-xl">Gabung
+            <a href="gabung.html"
+                class="block text-center mt-3 py-2.5 bg-brand-gold text-brand-dark font-bold rounded-xl">Gabung
                 Bersama Kami</a>
         </div>
     </nav>
@@ -208,9 +209,11 @@
                         <span
                             class="px-3 py-1 bg-amber-500 text-brand-dark text-[10px] font-extrabold uppercase rounded-full">Agenda
                             Utama Tahun Ini</span>
-                        <h2 class="text-2xl sm:text-3xl font-extrabold">Open Recruitment Saka Bhayangkara Ranting Leuwigoong</h2>
+                        <h2 class="text-2xl sm:text-3xl font-extrabold">Open Recruitment Saka Bhayangkara Ranting
+                            Leuwigoong</h2>
                         <p class="text-xs sm:text-sm text-gray-300 max-w-xl">
-                            Open Recruitment untuk menjadi bagian dari Satuan Karya Bhayangkara Ranting Leuwigoong. Siapkan
+                            Open Recruitment untuk menjadi bagian dari Satuan Karya Bhayangkara Ranting Leuwigoong.
+                            Siapkan
                             dirimu dan jadilah bagian dari tim yang berdedikasi!
                         </p>
                     </div>
@@ -280,6 +283,194 @@
             </div>
         </div>
     </div>
+    <!-- Modal Agenda -->
+    <div id="agendaModal" class="fixed inset-0 z-[9999] hidden items-center justify-center p-4">
+
+        <!-- Overlay -->
+        <div onclick="closeAgendaModal()" class="absolute inset-0 bg-black/60 backdrop-blur-sm"></div>
+
+        <!-- Modal Content -->
+        <div id="agendaModalContent"
+            class="relative w-full max-w-2xl bg-white rounded-3xl shadow-2xl overflow-hidden transform scale-95 opacity-0 transition-all duration-300">
+
+            <!-- Header -->
+            <div class="relative bg-gradient-to-r from-brand-dark via-amber-950 to-brand-dark px-6 py-6 sm:px-8">
+
+                <div class="absolute -right-10 -top-10 w-40 h-40 bg-amber-500/10 rounded-full blur-3xl"></div>
+
+                <div class="relative flex items-start justify-between gap-4">
+
+                    <div>
+                        <span
+                            class="inline-flex items-center gap-2 px-3 py-1 bg-amber-500 text-brand-dark text-[10px] font-extrabold uppercase tracking-wider rounded-full">
+                            <i class="fa-solid fa-bullhorn"></i>
+                            Agenda Utama
+                        </span>
+
+                        <h3 class="mt-3 text-xl sm:text-2xl font-extrabold text-white">
+                            Open Recruitment Saka Bhayangkara
+                        </h3>
+
+                        <p class="mt-1 text-sm text-gray-300">
+                            Ranting Leuwigoong
+                        </p>
+                    </div>
+
+                    <button onclick="closeAgendaModal()"
+                        class="shrink-0 w-9 h-9 rounded-xl bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+
+                </div>
+            </div>
+
+            <!-- Body -->
+            <div class="p-6 sm:p-8 max-h-[70vh] overflow-y-auto">
+
+                <!-- Status -->
+                <div class="flex items-center gap-3 p-4 bg-amber-50 border border-amber-200 rounded-2xl mb-6">
+
+                    <div
+                        class="w-10 h-10 shrink-0 rounded-xl bg-amber-500 text-brand-dark flex items-center justify-center">
+                        <i class="fa-solid fa-hourglass-half"></i>
+                    </div>
+
+                    <div>
+                        <p class="text-xs font-extrabold text-amber-700 uppercase tracking-wide">
+                            Status Pendaftaran
+                        </p>
+
+                        <p class="text-sm font-bold text-gray-900">
+                            Segera Dibuka
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Deskripsi -->
+                <div class="mb-6">
+                    <h4 class="text-sm font-extrabold text-gray-900 mb-2">
+                        <i class="fa-solid fa-circle-info text-amber-500 mr-1"></i>
+                        Tentang Kegiatan
+                    </h4>
+
+                    <p class="text-sm text-gray-600 leading-relaxed">
+                        Open Recruitment Saka Bhayangkara Ranting Leuwigoong merupakan
+                        kesempatan bagi anggota Pramuka Penegak dan calon anggota yang
+                        ingin mengembangkan keterampilan, kedisiplinan, kepemimpinan,
+                        serta wawasan di bidang kebhayangkaraan.
+                    </p>
+                </div>
+
+                <!-- Informasi -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
+
+                    <div class="p-4 rounded-2xl bg-gray-50 border border-gray-200">
+                        <div class="flex items-center gap-3">
+                            <div
+                                class="w-9 h-9 rounded-lg bg-amber-100 text-amber-600 flex items-center justify-center">
+                                <i class="fa-solid fa-calendar-days"></i>
+                            </div>
+
+                            <div>
+                                <p class="text-[10px] font-bold text-gray-400 uppercase">
+                                    Waktu
+                                </p>
+                                <p class="text-sm font-bold text-gray-900">
+                                    Segera Diumumkan
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="p-4 rounded-2xl bg-gray-50 border border-gray-200">
+                        <div class="flex items-center gap-3">
+                            <div
+                                class="w-9 h-9 rounded-lg bg-amber-100 text-amber-600 flex items-center justify-center">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+
+                            <div>
+                                <p class="text-[10px] font-bold text-gray-400 uppercase">
+                                    Lokasi
+                                </p>
+                                <p class="text-sm font-bold text-gray-900">
+                                    Ranting Leuwigoong
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Persyaratan -->
+                <div class="mb-6">
+                    <h4 class="text-sm font-extrabold text-gray-900 mb-3">
+                        <i class="fa-solid fa-list-check text-amber-500 mr-1"></i>
+                        Persyaratan Umum
+                    </h4>
+
+                    <div class="space-y-2">
+
+                        <div class="flex items-start gap-3">
+                            <i class="fa-solid fa-circle-check text-amber-500 mt-1"></i>
+                            <span class="text-sm text-gray-600">
+                                Anggota Pramuka Penegak.
+                            </span>
+                        </div>
+
+                        <div class="flex items-start gap-3">
+                            <i class="fa-solid fa-circle-check text-amber-500 mt-1"></i>
+                            <span class="text-sm text-gray-600">
+                                Aktif dalam kegiatan kepramukaan.
+                            </span>
+                        </div>
+
+                        <div class="flex items-start gap-3">
+                            <i class="fa-solid fa-circle-check text-amber-500 mt-1"></i>
+                            <span class="text-sm text-gray-600">
+                                Memiliki semangat disiplin dan bertanggung jawab.
+                            </span>
+                        </div>
+
+                        <div class="flex items-start gap-3">
+                            <i class="fa-solid fa-circle-check text-amber-500 mt-1"></i>
+                            <span class="text-sm text-gray-600">
+                                Bersedia mengikuti seluruh tahapan seleksi dan kegiatan.
+                            </span>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Catatan -->
+                <div class="p-4 bg-gray-50 border border-gray-200 rounded-2xl">
+
+                    <div class="flex gap-3">
+                        <i class="fa-solid fa-bell text-amber-500 mt-1"></i>
+
+                        <p class="text-xs sm:text-sm text-gray-600 leading-relaxed">
+                            Jadwal resmi, mekanisme pendaftaran, dan informasi
+                            persyaratan lengkap akan diumumkan melalui kanal informasi
+                            resmi DKR Leuwigoong.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Footer -->
+            <div class="px-6 sm:px-8 py-4 bg-gray-50 border-t border-gray-200 flex justify-end">
+
+                <button onclick="closeAgendaModal()"
+                    class="px-5 py-2.5 bg-gray-900 hover:bg-gray-800 text-white text-xs font-bold rounded-xl transition">
+                    Tutup
+                </button>
+
+            </div>
+
+        </div>
+    </div>
 
     <footer class="bg-brand-footer text-gray-400 text-xs py-10 mt-auto">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -298,16 +489,16 @@
                 <div>
                     <h4 class="text-white font-bold uppercase tracking-wider mb-3">Kontak Kami</h4>
                     <ul class="space-y-2">
-                        <li><i class="fa-solid fa-location-dot text-amber-500 mr-2"></i>Jl. Raya Leuwigoong No. 123,
-                            Garut 44192</li>
-                        <li><i class="fa-solid fa-phone text-amber-500 mr-2"></i>+62 812-3456-7890</li>
-                        <li><i class="fa-solid fa-envelope text-amber-500 mr-2"></i>dkrleuwigoong@gmail.com</li>
+                        <li><i class="fa-solid fa-location-dot text-amber-500 mr-2"></i>Jl. Raya Leuwigoong-Garut KM. 3,
+                            Desa Sindangsari, Kec. Leuwigoong, Kab. Garut 44192</li>
+                        <li><i class="fa-solid fa-phone text-amber-500 mr-2"></i>+62 821-2920-2724</li>
+                        <li><i class="fa-solid fa-envelope text-amber-500 mr-2"></i>dkrleuwigoong15@gmail.com</li>
                     </ul>
                 </div>
                 <div>
                     <h4 class="text-white font-bold uppercase tracking-wider mb-3">Media Sosial</h4>
                     <div class="flex gap-2">
-                        <a href="#"
+                        <a href="https://www.instagram.com/dkr_leuwigoong?igsi=eTc1M212Mmd0czlw"
                             class="w-8 h-8 rounded-lg bg-white/5 flex items-center justify-center text-gray-300 hover:bg-brand-gold hover:text-brand-dark transition-all"><i
                                 class="fa-brands fa-instagram"></i></a>
                         <a href="#"
@@ -330,111 +521,23 @@
         const agendaData = [
             {
                 id: 1,
-                title: "Rapat Koordinasi Ranting & Evaluasi Ambalan",
+                title: "Jota-Joti 2026 Cabang Garut",
                 status: "upcoming",
                 statusLabel: "Akan Datang",
                 statusClass: "bg-amber-500/10 text-amber-600 border border-amber-500/20",
-                date: "25 September 2026",
-                day: "25",
-                month: "SEP",
-                time: "13.30 - 17.00 WIB",
-                location: "Sanggar DKR Leuwigoong",
-                organizer: "Sekretariat DKR",
-                desc: "Pertemuan rutin pengurus DKR bersama para Pradana dan Pembina Ambalan se-Kecamatan Leuwigoong untuk penyelarasan agenda triwulan akhir.",
-                rundown: [
-                    "13.30 - Registrasi & Pembukaan",
-                    "14.00 - Pemaparan Evaluasi Program Triwulan 3",
-                    "15.30 - Istirahat & Sholat",
-                    "16.00 - Diskusi & FDT Persiapan GWR 2026",
-                    "17.00 - Penutup"
-                ],
-                requirements: "Wajib diwakili oleh Pradana atau Utusan Ambalan resmi (membawa Surat Tugas).",
-                linkRegister: "#"
-            },
-            {
-                id: 2,
-                title: "Gladi Widya Ranting Leuwigoong 2026",
-                status: "upcoming",
-                statusLabel: "Akan Datang",
-                statusClass: "bg-amber-500/10 text-amber-600 border border-amber-500/20",
-                date: "12 - 14 Oktober 2026",
-                day: "12",
+                date: "16 Oktober 2026",
+                day: "16",
                 month: "OKT",
-                time: "08.00 WIB (3 Hari)",
-                location: "Lapangan Sepakbola Leuwigoong",
-                organizer: "Bidang Kegiatan DKR",
-                desc: "Ajang perlombaan keterampilan, wawasan, dan ketangkasan bagi Pramuka Penegak se-Ranting Leuwigoong.",
+                time: "07.30 s.d. selesai",
+                location: "ART Center Garut",
+                organizer: "DKC Garut & Bidang Kegiatan DKR",
+                desc: "Jambore Teknologi dan Jambore Televisi Pramuka Penegak se-Kabupaten Garut, sebagai ajang edukasi dan kompetisi.",
                 rundown: [
-                    "Hari 1: Upacara Pembukaan, Lomba Pionering, TTG",
-                    "Hari 2: Giat Jelajah, Navigasi Darat, Pentas Seni",
-                    "Hari 3: Upacara Penutupan & Pengumuman Juara Umum"
+                    "Dalam tahap perencanaan!",
                 ],
-                requirements: "Satu sangga terdiri dari 8 orang Penegak Aktif berpakaian Pramuka Lengkap.",
+                requirements: "Bagi anggota penegak yang ingin berpartisipasi, silakan mendaftar melalui formulir online DKR.",
                 linkRegister: "#"
             },
-            {
-                id: 3,
-                title: "Pelatihan Digital Marketing & Media Pramuka",
-                status: "ongoing",
-                statusLabel: "Sedang Berlangsung",
-                statusClass: "bg-emerald-500/10 text-emerald-600 border border-emerald-500/20",
-                date: "03 September 2026",
-                day: "03",
-                month: "SEP",
-                time: "09.00 - 15.00 WIB",
-                location: "Aula SMAN 1 Leuwigoong",
-                organizer: "Bidang Abdimas & Humas",
-                desc: "Workshop peningkatan kapasitas tim Cyber/Humas Ambalan dalam pembuatan konten publikasi sosial media.",
-                rundown: [
-                    "09.00 - Materi Desain Grafis Canva & Photoshop",
-                    "11.00 - Praktik Video Copywriting",
-                    "13.30 - Praktik Publikasi Website & SEO Dasar"
-                ],
-                requirements: "Membawa Laptop & Smartphone dengan kuota internet aktif.",
-                linkRegister: "#"
-            },
-            {
-                id: 4,
-                title: "Aksi Bersih Aliran Sungai Leuwigoong",
-                status: "completed",
-                statusLabel: "Selesai",
-                statusClass: "bg-gray-500/10 text-gray-600 border border-gray-500/20",
-                date: "15 Agustus 2026",
-                day: "15",
-                month: "AGU",
-                time: "07.00 - 11.00 WIB",
-                location: "Bantaran Sungai Leuwigoong",
-                organizer: "Pramuka Peduli Leuwigoong",
-                desc: "Aksi kolaborasi aksi lingkungan memperingati Hari Pramuka Ke-65 bersama masyarakat lokal.",
-                rundown: [
-                    "07.00 - Apel Kesiapsiagaan Bakti Sosial",
-                    "07.30 - Pembagian Zonasi Bersih-bersih",
-                    "10.30 - Penimbangan Sampah & Penutupan"
-                ],
-                requirements: "Membawa sarung tangan karet dan lapangan outfit.",
-                linkRegister: "#"
-            },
-            {
-                id: 5,
-                title: "Raimuna Ranting & Kemah Bakti 2026",
-                status: "upcoming",
-                statusLabel: "Akan Datang",
-                statusClass: "bg-amber-500/10 text-amber-600 border border-amber-500/20",
-                date: "20 - 22 November 2026",
-                day: "20",
-                month: "NOV",
-                time: "08.00 WIB - Selesai",
-                location: "Bumi Perkemahan Pasir Kunci",
-                organizer: "DKR & Dewan Kehormatan",
-                desc: "Pertemuan besar Pramuka Penegak dan Pandega se-Ranting Leuwigoong penuh pengalaman edukatif dan menyenangkan.",
-                rundown: [
-                    "Hari 1: Mendirikan Tenda, Giat Wisata, Malam Persaudaraan",
-                    "Hari 2: Giat Bakti Desa, Jumpa Tokoh, Api Unggun",
-                    "Hari 3: Sayonara & Baksos Sembako"
-                ],
-                requirements: "Mendaftarkan kontingen via formulir online DKR.",
-                linkRegister: "#"
-            }
         ];
 
         let currentStatusFilter = 'all';
@@ -605,6 +708,43 @@
         document.addEventListener('DOMContentLoaded', () => {
             renderAgenda(agendaData);
         });
+
+        function openAgendaModal(id) {
+                const modal = document.getElementById('agendaModal');
+                const content = document.getElementById('agendaModalContent');
+
+                modal.classList.remove('hidden');
+                modal.classList.add('flex');
+
+                document.body.classList.add('overflow-hidden');
+
+                setTimeout(() => {
+                    content.classList.remove('scale-95', 'opacity-0');
+                    content.classList.add('scale-100', 'opacity-100');
+                }, 20);
+            }
+
+            function closeAgendaModal() {
+                const modal = document.getElementById('agendaModal');
+                const content = document.getElementById('agendaModalContent');
+
+                content.classList.remove('scale-100', 'opacity-100');
+                content.classList.add('scale-95', 'opacity-0');
+
+                setTimeout(() => {
+                    modal.classList.add('hidden');
+                    modal.classList.remove('flex');
+
+                    document.body.classList.remove('overflow-hidden');
+                }, 250);
+            }
+
+            /* Tutup dengan tombol ESC */
+            document.addEventListener('keydown', function (event) {
+                if (event.key === 'Escape') {
+                    closeAgendaModal();
+                }
+            });
     </script>
 </body>
 
