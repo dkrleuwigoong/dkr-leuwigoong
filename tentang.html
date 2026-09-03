@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tentang Kami - Dewan Kerja Ranting Leuwigoong</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap"
+        rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            gold: '#E09F27',
+                            goldHover: '#C6871A',
+                            dark: '#16120B',
+                            darkCard: '#1E1810',
+                            cardBg: '#FAF7F2',
+                            footer: '#110D07'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        .page-header-bg {
+            background: linear-gradient(180deg, rgba(22, 18, 11, 0.82) 0%, rgba(22, 18, 11, 0.95) 100%),
+                url('https://images.unsplash.com/photo-1526976668912-1a811878dd37?q=80&w=1600&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+
+<body class="font-sans text-gray-800 bg-[#F5F2EB] antialiased selection:bg-brand-gold selection:text-white">
+
+    <nav class="sticky top-0 z-40 bg-brand-dark/95 backdrop-blur-md border-b border-white/5 py-3">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+            <a href="beranda.html" class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl overflow-hidden flex items-center justify-center shadow-sm">
+                    <img src="assets/img/dkr-logo.png" alt="Logo DKR Leuwigoong" class="w-full h-full object-contain">
+                </div>
+                <div>
+                    <span
+                        class="block text-[10px] font-semibold text-amber-500 uppercase tracking-widest leading-none">Dewan
+                        Kerja Ranting</span>
+                    <span
+                        class="block text-lg font-extrabold text-white tracking-tight leading-tight mt-0.5">LEUWIGOONG</span>
+                </div>
+            </a>
+    
+            <div class="hidden md:flex items-center space-x-6 text-xs uppercase font-semibold text-gray-300">
+                <a href="beranda.html" class="hover:text-brand-gold transition-colors">Beranda</a>
+                <a href="tentang.html" class="text-brand-gold relative py-1 border-b-2 border-brand-gold">Tentang</a>
+                <a href="program.html" class="hover:text-brand-gold transition-colors">Program</a>
+                <a href="#" class="hover:text-brand-gold transition-colors">Agenda</a>
+                <a href="#" class="hover:text-brand-gold transition-colors">Berita</a>
+                <a href="#" class="hover:text-brand-gold transition-colors">Galeri</a>
+                <a href="#" class="hover:text-brand-gold transition-colors">Kontak</a>
+            </div>
+    
+            <div class="hidden md:block">
+                <a href="#"
+                    class="px-5 py-2.5 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-brand-dark hover:text-white font-bold text-xs rounded-xl shadow-md transition-all hover:-translate-y-0.5">
+                    Gabung Bersama Kami
+                </a>
+            </div>
+    
+            <button id="mobile-menu-btn" class="md:hidden text-gray-300 hover:text-white text-xl focus:outline-none">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    
+        <div id="mobile-menu"
+            class="hidden md:hidden px-4 pt-3 pb-4 space-y-2 border-t border-white/10 mt-2 text-xs font-semibold uppercase text-gray-300">
+            <a href="beranda.html" class="block py-2 hover:text-brand-gold">Beranda</a>
+            <a href="tentang.html" class="block py-2 text-brand-gold">Tentang</a>
+            <a href="program.html" class="block py-2 hover:text-brand-gold">Program</a>
+            <a href="#" class="block py-2 hover:text-brand-gold">Agenda</a>
+            <a href="#" class="block py-2 hover:text-brand-gold">Berita</a>
+            <a href="#" class="block py-2 hover:text-brand-gold">Galeri</a>
+            <a href="#" class="block py-2 hover:text-brand-gold">Kontak</a>
+            <a href="#" class="block text-center mt-3 py-2.5 bg-brand-gold text-brand-dark font-bold rounded-xl">Gabung
+                Bersama Kami</a>
+        </div>
+    </nav>
+
+    <header class="page-header-bg text-white py-20 px-4 sm:px-6 lg:px-8 text-center relative">
+        <div class="max-w-4xl mx-auto space-y-3">
+            <span class="text-xs font-bold uppercase tracking-widest text-brand-gold">Mengenal Lebih Dekat</span>
+            <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight">Tentang DKR Leuwigoong</h1>
+            <p class="text-gray-300 text-sm sm:text-base max-w-xl mx-auto font-normal">
+                Wadah Pembinaan Penegak dan Pandega Kwartir Ranting Leuwigoong yang berdedikasi membangun pemuda
+                berkarakter.
+            </p>
+        </div>
+    </header>
+
+    <section class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-12 gap-12 items-center">
+            <div class="lg:col-span-6 space-y-6">
+                <div>
+                    <span class="text-xs font-bold uppercase tracking-widest text-brand-gold block mb-2">PROFIL
+                        ORGANISASI</span>
+                    <h2 class="text-3xl font-extrabold text-gray-900 tracking-tight">Penggerak Pramuka Penegak & Pandega
+                        Leuwigoong</h2>
+                </div>
+                <p class="text-gray-600 text-sm leading-relaxed">
+                    Dewan Kerja Ranting (DKR) Leuwigoong merupakan wadah pembinaan dan kepemimpinan bagi Pramuka Penegak
+                    dan Pandega di tingkat Kecamatan Leuwigoong, Kabupaten Garut.
+                </p>
+                <p class="text-gray-600 text-sm leading-relaxed">
+                    Sebagai bagian integral dari Kwartir Ranting Leuwigoong, DKR berfungsi sebagai badan kelengkapan
+                    kwartir yang diberi wewenang mengelola kegiatan Pramuka Penegak dan Pandega secara mandiri, kreatif,
+                    dan bertanggung jawab.
+                </p>
+                <div class="grid grid-cols-2 gap-4 pt-2">
+                    <div class="bg-white p-4 rounded-xl border border-amber-900/5 shadow-sm">
+                        <h4 class="font-extrabold text-brand-gold text-2xl">2005</h4>
+                        <p class="text-xs text-gray-500 font-medium mt-1">Tahun Aktif Pembinaan Organisasi</p>
+                    </div>
+                    <div class="bg-white p-4 rounded-xl border border-amber-900/5 shadow-sm">
+                        <h4 class="font-extrabold text-brand-gold text-2xl">8 Gugus</h4>
+                        <p class="text-xs text-gray-500 font-medium mt-1">Ternaungi di Kec. Leuwigoong</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lg:col-span-6 grid grid-cols-2 gap-4">
+                <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?q=80&w=600&auto=format&fit=crop"
+                    alt="Foto Kegiatan DKR 1" class="rounded-2xl shadow-md w-full h-64 object-cover">
+                <img src="https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?q=80&w=600&auto=format&fit=crop"
+                    alt="Foto Kegiatan DKR 2" class="rounded-2xl shadow-md w-full h-64 object-cover mt-8">
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-white border-y border-amber-900/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-xs font-bold uppercase tracking-widest text-brand-gold block mb-2">ARAH &
+                    TUJUAN</span>
+                <h2 class="text-3xl font-extrabold text-gray-900 tracking-tight">Visi dan Misi Kami</h2>
+            </div>
+
+            <div class="grid md:grid-cols-12 gap-8">
+                <div
+                    class="md:col-span-5 bg-brand-dark text-white p-8 rounded-3xl relative overflow-hidden flex flex-col justify-between shadow-xl">
+                    <div class="relative z-10 space-y-4">
+                        <div
+                            class="w-12 h-12 bg-brand-gold/20 text-brand-gold rounded-xl flex items-center justify-center text-xl">
+                            <i class="fa-solid fa-eye"></i>
+                        </div>
+                        <h3 class="text-2xl font-extrabold tracking-tight">VISI</h3>
+                        <p class="text-gray-300 text-sm leading-relaxed font-normal">
+                            "Mewujudkan Pramuka Penegak dan Pandega Leuwigoong yang Unggul, Berkarakter, Berdaya Saing,
+                            serta Aktif Berkontribusi dalam Pembangunan Masyarakat."
+                        </p>
+                    </div>
+                    <div class="pt-8 text-xs text-brand-gold font-mono relative z-10">#DKRLeuwigoongMaju</div>
+                </div>
+
+                <div class="md:col-span-7 bg-brand-cardBg p-8 rounded-3xl border border-amber-900/5 space-y-6">
+                    <h3 class="text-xl font-extrabold text-gray-900 tracking-tight flex items-center gap-3">
+                        <div
+                            class="w-10 h-10 bg-brand-gold/15 text-brand-gold rounded-xl flex items-center justify-center text-base">
+                            <i class="fa-solid fa-bullseye"></i>
+                        </div>
+                        MISI ORGANISASI
+                    </h3>
+                    <ul class="space-y-4 text-xs text-gray-700">
+                        <li class="flex items-start gap-3 bg-white p-3.5 rounded-2xl border border-gray-100 shadow-sm">
+                            <span
+                                class="w-6 h-6 bg-brand-gold text-brand-dark rounded-full flex items-center justify-center font-bold text-xs flex-shrink-0 mt-0.5">1</span>
+                            <span>Meningkatkan kualitas tata kelola organisasi dan pembinaan anggota secara
+                                sistematis.</span>
+                        </li>
+                        <li class="flex items-start gap-3 bg-white p-3.5 rounded-2xl border border-gray-100 shadow-sm">
+                            <span
+                                class="w-6 h-6 bg-brand-gold text-brand-dark rounded-full flex items-center justify-center font-bold text-xs flex-shrink-0 mt-0.5">2</span>
+                            <span>Mendorong terciptanya kegiatan berbasis ketangkasan, kepemimpinan, dan teknologi
+                                digital.</span>
+                        </li>
+                        <li class="flex items-start gap-3 bg-white p-3.5 rounded-2xl border border-gray-100 shadow-sm">
+                            <span
+                                class="w-6 h-6 bg-brand-gold text-brand-dark rounded-full flex items-center justify-center font-bold text-xs flex-shrink-0 mt-0.5">3</span>
+                            <span>Mempererat jaringan silaturahmi antar Gugus Depan di wilayah Kwartir Ranting
+                                Leuwigoong.</span>
+                        </li>
+                        <li class="flex items-start gap-3 bg-white p-3.5 rounded-2xl border border-gray-100 shadow-sm">
+                            <span
+                                class="w-6 h-6 bg-brand-gold text-brand-dark rounded-full flex items-center justify-center font-bold text-xs flex-shrink-0 mt-0.5">4</span>
+                            <span>Menyelenggarakan program pengabdian masyarakat dan kepedulian lingkungan secara
+                                berkelanjutan.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto mb-16">
+            <span class="text-xs font-bold uppercase tracking-widest text-brand-gold block mb-2">PENGURUS DKR</span>
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900 tracking-tight">Struktur Kepengurusan</h2>
+            <p class="text-gray-600 text-sm mt-2">Masa Bakti DKR Leuwigoong yang bertugas dan mengabdi.</p>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="bg-white rounded-2xl overflow-hidden border border-amber-900/5 shadow-md text-center p-6 space-y-4">
+                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=300&auto=format&fit=crop"
+                    alt="Ketua DKR" class="w-24 h-24 rounded-full mx-auto object-cover border-4 border-brand-gold/20">
+                <div>
+                    <h4 class="font-bold text-gray-900 text-sm">Ahmad Fauzi</h4>
+                    <p class="text-xs text-brand-gold font-semibold mt-0.5">Ketua DKR</p>
+                </div>
+                <p class="text-[11px] text-gray-500 leading-relaxed">Mengarahkan visi utama dan mengoordinasikan seluruh
+                    bidang kerja DKR.</p>
+            </div>
+
+            <div class="bg-white rounded-2xl overflow-hidden border border-amber-900/5 shadow-md text-center p-6 space-y-4">
+                <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?q=80&w=300&auto=format&fit=crop"
+                    alt="Wakil Ketua DKR"
+                    class="w-24 h-24 rounded-full mx-auto object-cover border-4 border-brand-gold/20">
+                <div>
+                    <h4 class="font-bold text-gray-900 text-sm">Siti Nurhaliza</h4>
+                    <p class="text-xs text-brand-gold font-semibold mt-0.5">Wakil Ketua</p>
+                </div>
+                <p class="text-[11px] text-gray-500 leading-relaxed">Mendampingi ketua dan mengawasi jalannya fungsi
+                    internal kepengurusan.</p>
+            </div>
+
+            <div
+                class="bg-white rounded-2xl overflow-hidden border border-amber-900/5 shadow-md text-center p-6 space-y-4">
+                <img src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?q=80&w=300&auto=format&fit=crop"
+                    alt="Sekretaris DKR"
+                    class="w-24 h-24 rounded-full mx-auto object-cover border-4 border-brand-gold/20">
+                <div>
+                    <h4 class="font-bold text-gray-900 text-sm">Rizky Pratama</h4>
+                    <p class="text-xs text-brand-gold font-semibold mt-0.5">Sekretaris</p>
+                </div>
+                <p class="text-[11px] text-gray-500 leading-relaxed">Mengelola tata kelola administrasi, kearsipan, dan
+                    persuratan DKR.</p>
+            </div>
+
+            <div
+                class="bg-white rounded-2xl overflow-hidden border border-amber-900/5 shadow-md text-center p-6 space-y-4">
+                <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=300&auto=format&fit=crop"
+                    alt="Bendahara DKR"
+                    class="w-24 h-24 rounded-full mx-auto object-cover border-4 border-brand-gold/20">
+                <div>
+                    <h4 class="font-bold text-gray-900 text-sm">Dewi Lestari</h4>
+                    <p class="text-xs text-brand-gold font-semibold mt-0.5">Bendahara</p>
+                </div>
+                <p class="text-[11px] text-gray-500 leading-relaxed">Bertanggung jawab atas tata kelola keuangan dan
+                    anggaran kegiatan.</p>
+            </div>
+
+            <div class="bg-white rounded-2xl overflow-hidden border border-amber-900/5 shadow-md text-center p-6 space-y-4">
+                <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=300&auto=format&fit=crop"
+                    alt="Bendahara DKR" class="w-24 h-24 rounded-full mx-auto object-cover border-4 border-brand-gold/20">
+                <div>
+                    <h4 class="font-bold text-gray-900 text-sm">Dewi Lestari</h4>
+                    <p class="text-xs text-brand-gold font-semibold mt-0.5">Bendahara</p>
+                </div>
+                <p class="text-[11px] text-gray-500 leading-relaxed">Bertanggung jawab atas tata kelola keuangan dan
+                    anggaran kegiatan.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-brand-footer text-gray-400 pt-16 pb-8 text-xs">
+        <div
+            class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-10 pb-12 border-b border-white/5">
+            <div class="space-y-4">
+                <div class="flex items-center gap-3 text-white">
+                    <div
+                        class="w-8 h-8 rounded-lg bg-brand-gold text-brand-dark font-extrabold flex items-center justify-center">
+                        DKR</div>
+                    <span class="font-extrabold text-sm tracking-tight">LEUWIGOONG</span>
+                </div>
+                <p class="leading-relaxed text-gray-400">
+                    Wadah bagi Pramuka Penegak dan Pandega untuk berkarya, berinovasi, dan berdampak nyata bagi
+                    masyarakat.
+                </p>
+                <div class="flex gap-2.5 pt-1">
+                    <a href="#"
+                        class="w-8 h-8 bg-white/5 rounded-lg flex items-center justify-center text-gray-300 hover:text-brand-dark hover:bg-brand-gold transition"><i
+                            class="fa-brands fa-instagram"></i></a>
+                    <a href="#"
+                        class="w-8 h-8 bg-white/5 rounded-lg flex items-center justify-center text-gray-300 hover:text-brand-dark hover:bg-brand-gold transition"><i
+                            class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"
+                        class="w-8 h-8 bg-white/5 rounded-lg flex items-center justify-center text-gray-300 hover:text-brand-dark hover:bg-brand-gold transition"><i
+                            class="fa-brands fa-youtube"></i></a>
+                    <a href="#"
+                        class="w-8 h-8 bg-white/5 rounded-lg flex items-center justify-center text-gray-300 hover:text-brand-dark hover:bg-brand-gold transition"><i
+                            class="fa-brands fa-tiktok"></i></a>
+                </div>
+            </div>
+
+            <div>
+                <h4 class="text-white font-bold uppercase tracking-wider mb-4">LINK CEPAT</h4>
+                <ul class="space-y-2.5">
+                    <li><a href="beranda.html" class="hover:text-brand-gold transition">Beranda</a></li>
+                    <li><a href="tentang.html" class="hover:text-brand-gold transition">Tentang Kami</a></li>
+                    <li><a href="#" class="hover:text-brand-gold transition">Program Kerja</a></li>
+                    <li><a href="#" class="hover:text-brand-gold transition">Agenda Kegiatan</a></li>
+                    <li><a href="#" class="hover:text-brand-gold transition">Berita & Artikel</a></li>
+                    <li><a href="#" class="hover:text-brand-gold transition">Galeri Foto</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="text-white font-bold uppercase tracking-wider mb-4">INFORMASI</h4>
+                <ul class="space-y-3">
+                    <li class="flex items-start gap-2.5">
+                        <i class="fa-solid fa-location-dot mt-1 text-brand-gold"></i>
+                        <span>Jl. Raya Leuwigoong No. 123, Leuwigoong, Kabupaten Garut 44192</span>
+                    </li>
+                    <li class="flex items-center gap-2.5">
+                        <i class="fa-solid fa-phone text-brand-gold"></i>
+                        <span>+62 812-3456-7890</span>
+                    </li>
+                    <li class="flex items-center gap-2.5">
+                        <i class="fa-solid fa-envelope text-brand-gold"></i>
+                        <span>dkrleuwigoong@gmail.com</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="text-white font-bold uppercase tracking-wider mb-4">GALERI INSTAGRAM</h4>
+                <div class="grid grid-cols-3 gap-2">
+                    <img src="https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?q=80&w=150&auto=format&fit=crop"
+                        class="w-full h-16 object-cover rounded-lg hover:opacity-80 transition cursor-pointer"
+                        alt="Gallery">
+                    <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?q=80&w=150&auto=format&fit=crop"
+                        class="w-full h-16 object-cover rounded-lg hover:opacity-80 transition cursor-pointer"
+                        alt="Gallery">
+                    <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?q=80&w=150&auto=format&fit=crop"
+                        class="w-full h-16 object-cover rounded-lg hover:opacity-80 transition cursor-pointer"
+                        alt="Gallery">
+                    <img src="https://images.unsplash.com/photo-1478131143081-80f7f84ca84d?q=80&w=150&auto=format&fit=crop"
+                        class="w-full h-16 object-cover rounded-lg hover:opacity-80 transition cursor-pointer"
+                        alt="Gallery">
+                    <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?q=80&w=150&auto=format&fit=crop"
+                        class="w-full h-16 object-cover rounded-lg hover:opacity-80 transition cursor-pointer"
+                        alt="Gallery">
+                    <img src="https://images.unsplash.com/photo-1618477461853-cf6ed80faba5?q=80&w=150&auto=format&fit=crop"
+                        class="w-full h-16 object-cover rounded-lg hover:opacity-80 transition cursor-pointer"
+                        alt="Gallery">
+                </div>
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-8 text-center text-gray-500 text-[11px]">
+            &copy; 2026 Dewan Kerja Ranting Leuwigoong. All Rights Reserved.
+        </div>
+    </footer>
+
+    <script>
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+
+</html>

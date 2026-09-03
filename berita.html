@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="id" class="h-full">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Berita & Informasi - Dewan Kerja Ranting Leuwigoong</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap"
+        rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            gold: '#E09F27',
+                            'gold-hover': '#C6871A',
+                            dark: '#16120B',
+                            'dark-card': '#1E1810',
+                            card: '#FAF7F2',
+                            footer: '#110D07',
+                            bg: '#F5F2EB'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-brand-bg text-gray-800 font-sans flex flex-col min-h-full antialiased">
+
+    <nav class="sticky top-0 z-40 bg-brand-dark/95 backdrop-blur-md border-b border-white/5 py-3">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+            <a href="beranda.html" class="flex items-center gap-3">
+                <img src="assets/img/dkr-logo.png" alt="Logo DKR Leuwigoong"
+                    class="w-10 h-10 object-contain drop-shadow-md"
+                    onerror="this.onerror=null; this.src='https://via.placeholder.com/40?text=DKR';">
+                <div>
+                    <span
+                        class="block text-[10px] font-semibold text-amber-500 uppercase tracking-widest leading-none">Dewan
+                        Kerja Ranting</span>
+                    <span
+                        class="block text-lg font-extrabold text-white tracking-tight leading-tight mt-0.5">LEUWIGOONG</span>
+                </div>
+            </a>
+
+            <div class="hidden md:flex items-center space-x-6 text-xs uppercase font-semibold text-gray-300">
+                <a href="beranda.html" class="hover:text-brand-gold transition-colors">Beranda</a>
+                <a href="tentang.html" class="hover:text-brand-gold transition-colors">Tentang</a>
+                <a href="program.html" class="hover:text-brand-gold transition-colors">Program</a>
+                <a href="agenda.html" class="hover:text-brand-gold transition-colors">Agenda</a>
+                <a href="berita.html" class="text-brand-gold relative py-1 border-b-2 border-brand-gold">Berita</a>
+                <a href="galeri.html" class="hover:text-brand-gold transition-colors">Galeri</a>
+                <a href="kontak.html" class="hover:text-brand-gold transition-colors">Kontak</a>
+            </div>
+
+            <div class="hidden md:block">
+                <a href="#"
+                    class="px-5 py-2.5 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-brand-dark hover:text-white font-bold text-xs rounded-xl shadow-md transition-all hover:-translate-y-0.5">
+                    Gabung Bersama Kami
+                </a>
+            </div>
+
+            <button id="mobile-menu-btn" class="md:hidden text-gray-300 hover:text-white text-xl focus:outline-none">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <div id="mobile-menu"
+            class="hidden md:hidden px-4 pt-3 pb-4 space-y-2 border-t border-white/10 mt-2 text-xs font-semibold uppercase text-gray-300">
+            <a href="beranda.html" class="block py-2 hover:text-brand-gold">Beranda</a>
+            <a href="tentang.html" class="block py-2 hover:text-brand-gold">Tentang</a>
+            <a href="program.html" class="block py-2 hover:text-brand-gold">Program</a>
+            <a href="agenda.html" class="block py-2 hover:text-brand-gold">Agenda</a>
+            <a href="berita.html" class="block py-2 text-brand-gold">Berita</a>
+            <a href="#" class="block py-2 hover:text-brand-gold">Galeri</a>
+            <a href="#" class="block py-2 hover:text-brand-gold">Kontak</a>
+            <a href="#" class="block text-center mt-3 py-2.5 bg-brand-gold text-brand-dark font-bold rounded-xl">Gabung
+                Bersama Kami</a>
+        </div>
+    </nav>
+
+    <header
+        class="relative bg-gradient-to-b from-brand-dark/90 to-brand-dark/95 text-white py-16 px-4 sm:px-6 lg:px-8 text-center bg-cover bg-center"
+        style="background-image: linear-gradient(180deg, rgba(22, 18, 11, 0.88) 0%, rgba(22, 18, 11, 0.96) 100%), url('https://images.unsplash.com/photo-1504711434969-e33886168f5c?q=80&w=1600&auto=format&fit=crop');">
+        <div class="max-w-3xl mx-auto">
+            <span
+                class="inline-block px-3 py-1 bg-amber-500/20 text-amber-400 uppercase tracking-widest font-bold text-[11px] rounded-md mb-3">
+                Kabar & Artikel Terkini
+            </span>
+            <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-3 tracking-tight">Berita Pramuka</h1>
+            <p class="text-gray-300 text-sm sm:text-base max-w-xl mx-auto">
+                Dapatkan informasi terbaru seputar rekam jejak, kabar kegiatan, prestasi, dan gagasan Pramuka Penegak &
+                Pandega Leuwigoong.
+            </p>
+        </div>
+    </header>
+
+    <main class="flex-grow py-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <div class="mb-12">
+                <div
+                    class="bg-white rounded-3xl border border-gray-200/80 shadow-md overflow-hidden grid grid-cols-1 lg:grid-cols-12">
+                    <div class="lg:col-span-7 relative min-h-[280px] lg:min-h-[380px] bg-cover bg-center"
+                        style="background-image: url('https://images.unsplash.com/photo-1526976668912-1a811878dd37?q=80&w=1200&auto=format&fit=crop');">
+                        <span
+                            class="absolute top-4 left-4 px-3 py-1 bg-brand-gold text-brand-dark font-extrabold text-[10px] uppercase rounded-lg shadow">
+                            Headline Utam
+                        </span>
+                    </div>
+                    <div class="lg:col-span-5 p-6 sm:p-8 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center gap-3 text-xs text-gray-500 mb-3">
+                                <span><i class="fa-regular fa-calendar text-amber-500 mr-1"></i> 02 September
+                                    2026</span>
+                                <span>•</span>
+                                <span><i class="fa-solid fa-tag text-amber-500 mr-1"></i> Prestasi</span>
+                            </div>
+                            <h2 class="text-xl sm:text-2xl font-extrabold text-gray-900 mb-3 leading-snug hover:text-amber-600 transition-colors cursor-pointer"
+                                onclick="openNewsModal(1)">
+                                Kontingen DKR Leuwigoong Sabet Juara Umum Kemah Bakti Cabang Garut 2026
+                            </h2>
+                            <p class="text-xs sm:text-sm text-gray-600 leading-relaxed mb-6">
+                                Utusan Penegak dan Pandega Leuwigoong berhasil mengukir prestasi gemilang dengan membawa
+                                pulang piala bergilir setelah mendominasi tiga kategori lomba utama.
+                            </p>
+                        </div>
+                        <div class="flex items-center justify-between pt-4 border-t border-gray-100">
+                            <div class="flex items-center gap-2">
+                                <div
+                                    class="w-7 h-7 rounded-full bg-brand-dark text-brand-gold flex items-center justify-center font-bold text-[10px]">
+                                    H</div>
+                                <span class="text-xs text-gray-700 font-semibold">Humas DKR</span>
+                            </div>
+                            <button onclick="openNewsModal(1)"
+                                class="px-4 py-2 bg-brand-dark hover:bg-amber-600 text-brand-gold hover:text-brand-dark font-bold text-xs rounded-xl transition-all">
+                                Baca Selengkapnya <i class="fa-solid fa-arrow-right ml-1"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex flex-col md:flex-row gap-4 items-center justify-between mb-8">
+                <div class="flex flex-wrap gap-2 justify-center md:justify-start w-full md:w-auto">
+                    <button onclick="filterNews('all', this)"
+                        class="btn-news-filter px-4 py-2 bg-brand-dark text-brand-gold rounded-xl text-xs font-semibold shadow-sm transition-all border border-brand-dark">Semua
+                        Berita</button>
+                    <button onclick="filterNews('kegiatan', this)"
+                        class="btn-news-filter px-4 py-2 bg-white text-gray-700 hover:bg-brand-dark hover:text-brand-gold rounded-xl text-xs font-semibold shadow-sm transition-all border border-gray-200">Kegiatan</button>
+                    <button onclick="filterNews('prestasi', this)"
+                        class="btn-news-filter px-4 py-2 bg-white text-gray-700 hover:bg-brand-dark hover:text-brand-gold rounded-xl text-xs font-semibold shadow-sm transition-all border border-gray-200">Prestasi</button>
+                    <button onclick="filterNews('pengumuman', this)"
+                        class="btn-news-filter px-4 py-2 bg-white text-gray-700 hover:bg-brand-dark hover:text-brand-gold rounded-xl text-xs font-semibold shadow-sm transition-all border border-gray-200">Pengumuman</button>
+                    <button onclick="filterNews('opini', this)"
+                        class="btn-news-filter px-4 py-2 bg-white text-gray-700 hover:bg-brand-dark hover:text-brand-gold rounded-xl text-xs font-semibold shadow-sm transition-all border border-gray-200">Opini
+                        & Edukasi</button>
+                </div>
+
+                <div class="relative w-full md:w-72">
+                    <i
+                        class="fa-solid fa-magnifying-glass absolute left-3.5 top-1/2 -translate-y-1/2 text-gray-400 text-xs"></i>
+                    <input type="text" id="news-search" onkeyup="searchNews()" placeholder="Cari berita..."
+                        class="w-full pl-9 pr-4 py-2 bg-white border border-gray-200 rounded-xl text-xs focus:outline-none focus:border-brand-gold focus:ring-1 focus:ring-brand-gold">
+                </div>
+            </div>
+
+            <div id="news-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+            </div>
+
+            <div
+                class="bg-gradient-to-r from-brand-dark via-amber-950 to-brand-dark text-white rounded-3xl p-8 shadow-xl text-center relative overflow-hidden">
+                <div class="max-w-xl mx-auto space-y-3 relative z-10">
+                    <i class="fa-solid fa-envelope-open-text text-3xl text-brand-gold mb-1"></i>
+                    <h3 class="text-xl sm:text-2xl font-extrabold">Dapatkan Warta Pramuka Langsung</h3>
+                    <p class="text-xs text-gray-300">
+                        Berlangganan newsletter bulanan DKR Leuwigoong untuk mendapatkan ringkasan berita, jadwal
+                        agenda, serta artikel edukasi terbaru.
+                    </p>
+                    <form onsubmit="handleSubscribe(event)" class="flex flex-col sm:flex-row gap-2 pt-2">
+                        <input type="email" required placeholder="Masukkan alamat email Anda..."
+                            class="px-4 py-2.5 bg-white/10 border border-white/20 rounded-xl text-xs text-white placeholder-gray-400 focus:outline-none focus:border-brand-gold flex-grow">
+                        <button type="submit"
+                            class="px-6 py-2.5 bg-brand-gold hover:bg-amber-600 text-brand-dark font-extrabold text-xs rounded-xl shadow transition-all shrink-0">
+                            Langganan
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <div id="news-modal"
+        class="fixed inset-0 z-50 hidden bg-black/60 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl max-w-2xl w-full p-6 sm:p-8 shadow-2xl relative max-h-[90vh] overflow-y-auto">
+            <button onclick="closeNewsModal()"
+                class="absolute top-4 right-4 text-gray-400 hover:text-gray-600 text-xl z-10">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <div>
+                <span id="modal-category"
+                    class="px-2.5 py-1 bg-amber-500/10 text-amber-600 font-bold text-[10px] rounded-md uppercase tracking-wider inline-block mb-3">Kategori</span>
+                <h2 id="modal-title" class="text-xl sm:text-2xl font-extrabold text-gray-900 mb-3 leading-snug">Judul
+                    Berita</h2>
+
+                <div class="flex items-center gap-4 text-xs text-gray-500 mb-5 pb-4 border-b border-gray-100">
+                    <span><i class="fa-regular fa-calendar text-amber-500 mr-1"></i> <span id="modal-date">01 Jan
+                            2026</span></span>
+                    <span><i class="fa-regular fa-user text-amber-500 mr-1"></i> <span
+                            id="modal-author">Penulis</span></span>
+                </div>
+
+                <div class="rounded-xl overflow-hidden mb-5 max-h-72">
+                    <img id="modal-image" src="" alt="Gambar Berita" class="w-full h-full object-cover">
+                </div>
+
+                <div id="modal-content" class="text-xs sm:text-sm text-gray-700 leading-relaxed space-y-3 mb-6">
+                </div>
+
+                <div class="pt-4 border-t border-gray-100 flex items-center justify-between">
+                    <span class="text-xs font-semibold text-gray-500">Bagikan Berita:</span>
+                    <div class="flex gap-2">
+                        <a href="#"
+                            class="w-8 h-8 rounded-lg bg-gray-100 flex items-center justify-center text-gray-600 hover:bg-brand-gold hover:text-brand-dark transition-all text-xs"><i
+                                class="fa-brands fa-whatsapp"></i></a>
+                        <a href="#"
+                            class="w-8 h-8 rounded-lg bg-gray-100 flex items-center justify-center text-gray-600 hover:bg-brand-gold hover:text-brand-dark transition-all text-xs"><i
+                                class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"
+                            class="w-8 h-8 rounded-lg bg-gray-100 flex items-center justify-center text-gray-600 hover:bg-brand-gold hover:text-brand-dark transition-all text-xs"><i
+                                class="fa-solid fa-link"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-brand-footer text-gray-400 text-xs py-10 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 pb-8 border-b border-white/10">
+                <div>
+                    <div class="flex items-center gap-2 mb-3">
+                        <img src="assets/img/dkr-logo.png" alt="Logo DKR" class="w-7 h-7 object-contain"
+                            onerror="this.onerror=null; this.src='https://via.placeholder.com/30?text=DKR';">
+                        <span class="font-extrabold text-white text-sm">LEUWIGOONG</span>
+                    </div>
+                    <p class="text-gray-400 leading-relaxed">
+                        Wadah bagi Pramuka Penegak dan Pandega untuk berkarya, berinovasi, dan berdampak nyata bagi
+                        masyarakat.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold uppercase tracking-wider mb-3">Kontak Kami</h4>
+                    <ul class="space-y-2">
+                        <li><i class="fa-solid fa-location-dot text-amber-500 mr-2"></i>Jl. Raya Leuwigoong No. 123,
+                            Garut 44192</li>
+                        <li><i class="fa-solid fa-phone text-amber-500 mr-2"></i>+62 812-3456-7890</li>
+                        <li><i class="fa-solid fa-envelope text-amber-500 mr-2"></i>dkrleuwigoong@gmail.com</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold uppercase tracking-wider mb-3">Media Sosial</h4>
+                    <div class="flex gap-2">
+                        <a href="#"
+                            class="w-8 h-8 rounded-lg bg-white/5 flex items-center justify-center text-gray-300 hover:bg-brand-gold hover:text-brand-dark transition-all"><i
+                                class="fa-brands fa-instagram"></i></a>
+                        <a href="#"
+                            class="w-8 h-8 rounded-lg bg-white/5 flex items-center justify-center text-gray-300 hover:bg-brand-gold hover:text-brand-dark transition-all"><i
+                                class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"
+                            class="w-8 h-8 rounded-lg bg-white/5 flex items-center justify-center text-gray-300 hover:bg-brand-gold hover:text-brand-dark transition-all"><i
+                                class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="pt-6 text-center text-gray-500 text-[11px]">
+                &copy; 2026 Dewan Kerja Ranting Leuwigoong. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const newsData = [
+            {
+                id: 1,
+                title: "Kontingen DKR Leuwigoong Sabet Juara Umum Kemah Bakti Cabang Garut 2026",
+                category: "prestasi",
+                categoryLabel: "Prestasi",
+                date: "02 September 2026",
+                author: "Humas DKR",
+                image: "https://images.unsplash.com/photo-1526976668912-1a811878dd37?q=80&w=800&auto=format&fit=crop",
+                summary: "Utusan Penegak dan Pandega Leuwigoong berhasil membawa pulang piala bergilir setelah mendominasi tiga kategori lomba utama.",
+                content: [
+                    "GARUT - Kontingen Dewan Kerja Ranting (DKR) Leuwigoong sukses menorehkan tinta emas pada ajang Kemah Bakti Cabang Garut tahun 2026 yang berlangsung di Bumi Perkemahan Cilopang.",
+                    "Dalam ajang tahunan yang diikuti oleh 42 kontingen ranting se-Kabupaten Garut ini, kontingen Leuwigoong berhasil memborong Juara 1 Lomba Pionering Kreatif, Juara 1 Karya Tulis Lingkungan, dan Juara 2 Navigasi Darat.",
+                    "Ketua DKR Leuwigoong menyampaikan rasa bangga atas kerja keras dan disiplin seluruh pangkalan yang turut serta mendukung persiapan kontingen selama dua bulan terakhir."
+                ]
+            },
+            {
+                id: 2,
+                title: "Latihan Gabungan Seri 3 Tekankan Penguasaan Kompas & Navigasi Darat",
+                category: "kegiatan",
+                categoryLabel: "Kegiatan",
+                date: "28 Agustus 2026",
+                dateRaw: "2026-08-28",
+                author: "Bidang Kajian",
+                image: "https://images.unsplash.com/photo-1506784983877-45594efa4cbe?q=80&w=800&auto=format&fit=crop",
+                summary: "Sebanyak 120 Penegak dari 8 Ambalan antusias mengikuti simulasi navigasi kompas bidik di perbukitan Leuwigoong.",
+                content: [
+                    "LEUWIGOONG - Bidang Kajian Kepramukaan DKR Leuwigoong sukses menggelar Latihan Gabungan (Latgab) Seri 3 bertema 'Navigasi Medan & Analisis Peta'.",
+                    "Kegiatan dibuka langsung oleh Ketua Kwarran Leuwigoong dan dilanjutkan dengan materi serta praktik simulasi kompas bidik, peta pita, dan perhitungan azimuth-back azimuth di lapangan.",
+                    "Diharapkan para peserta dapat menularkan ilmu lapangan ini kepada rekan-rekan Ambalan di pangkalan masing-masing."
+                ]
+            },
+            {
+                id: 3,
+                title: "Pengumuman Pendaftaran Seleksi Kontingen Raimuna Cabang",
+                category: "pengumuman",
+                categoryLabel: "Pengumuman",
+                date: "20 Agustus 2026",
+                author: "Sekretariat DKR",
+                image: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?q=80&w=800&auto=format&fit=crop",
+                summary: "Pendaftaran seleksi terbuka bagi Pramuka Penegak & Pandega Leuwigoong yang ingin bergabung menjadi bagian dari kontingen Ranting.",
+                content: [
+                    "Diberitahukan kepada seluruh Pradana & Pembina Ambalan se-Kecamatan Leuwigoong bahwa seleksi terbuka Kontingen Raimuna Cabang resmi dibuka.",
+                    "Syarat pendaftaran antara lain: Pramuka Penegak Bantara/Laksana/Garut aktif, berusia 16-23 tahun, serta mendapatkan rekomendasi tertulis dari Gugus Depan.",
+                    "Berkas pendaftaran dapat diunggah melalui formulir digital atau diserahkan langsung ke Sanggar DKR paling lambat tanggal 15 September 2026."
+                ]
+            },
+            {
+                id: 4,
+                title: "Pentingnya Manajemen Risiko dalam Kegiatan Kepramukaan Alam Terbuka",
+                category: "opini",
+                categoryLabel: "Opini & Edukasi",
+                date: "10 Agustus 2026",
+                author: "M. Rizal (DKR)",
+                image: "https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?q=80&w=800&auto=format&fit=crop",
+                summary: "Artikel edukasi mengenai langkah-langkah mitigasi keselamatan saat mengorganisir penjelajahan dan pengembaraan.",
+                content: [
+                    "Kegiatan alam terbuka merupakan ruh kepramukaan yang memberikan pelajaran keberanian dan kedisiplinan. Namun, keselamatan tetap menjadi prioritas utama yang tidak boleh ditawar.",
+                    "Manajemen risiko mencakup penilaian kondisi cuaca, kesiapan fisik sangga, jalur evakuasi darurat, serta kelengkapan pertolongan pertama (P3K).",
+                    "Setiap Sangga Kerja harus menyusun Standard Operating Procedure (SOP) yang jelas sebelum melangkahkan kaki ke medan penjelajahan."
+                ]
+            },
+            {
+                id: 5,
+                title: "Pramuka Peduli Tanam 200 Pohon di Bantaran Sungai Leuwigoong",
+                category: "kegiatan",
+                categoryLabel: "Kegiatan",
+                date: "05 Agustus 2026",
+                author: "Abdimas DKR",
+                image: "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?q=80&w=800&auto=format&fit=crop",
+                summary: "Aksi hijau wujud pengamalan Dasadarma ke-2 guna mencegah erosi tanah di area bantaran sungai.",
+                content: [
+                    "Aksi bakti masyarakat Pramuka Peduli Leuwigoong kembali digelar dengan menanam 200 bibit pohon mahoni dan produktif di sepanjang aliran sungai.",
+                    "Kegiatan ini turut dihadiri oleh perangkat desa, karang taruna, dan warga setempat yang menyambut positif inisiatif pemuda Pramuka."
+                ]
+            }
+        ];
+
+        let currentCategory = 'all';
+
+        function renderNews(data) {
+            const container = document.getElementById('news-container');
+            container.innerHTML = '';
+
+            if (data.length === 0) {
+                container.innerHTML = `<div class="col-span-full text-center text-gray-400 py-12"><i class="fa-regular fa-newspaper text-4xl mb-3 block"></i>Berita tidak ditemukan.</div>`;
+                return;
+            }
+
+            data.forEach(item => {
+                const card = `
+                    <div class="bg-brand-card rounded-2xl border border-gray-200/60 overflow-hidden shadow-sm hover:shadow-md hover:-translate-y-1 transition-all flex flex-col justify-between">
+                        <div>
+                            <div class="relative h-44 overflow-hidden bg-gray-200">
+                                <img src="${item.image}" alt="${item.title}" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                                <span class="absolute top-3 left-3 px-2.5 py-1 bg-brand-dark/80 backdrop-blur-md text-brand-gold font-bold text-[10px] rounded-md uppercase tracking-wider">${item.categoryLabel}</span>
+                            </div>
+                            <div class="p-5">
+                                <div class="flex items-center gap-3 text-[11px] text-gray-500 mb-2">
+                                    <span><i class="fa-regular fa-calendar text-amber-500 mr-1"></i>${item.date}</span>
+                                    <span>•</span>
+                                    <span><i class="fa-regular fa-user text-amber-500 mr-1"></i>${item.author}</span>
+                                </div>
+                                <h3 onclick="openNewsModal(${item.id})" class="font-bold text-gray-900 text-base mb-2 line-clamp-2 hover:text-amber-600 cursor-pointer transition-colors">${item.title}</h3>
+                                <p class="text-xs text-gray-500 line-clamp-3 mb-4">${item.summary}</p>
+                            </div>
+                        </div>
+                        <div class="px-5 pb-5 pt-0">
+                            <button onclick="openNewsModal(${item.id})" class="w-full py-2 border border-brand-gold text-brand-gold hover:bg-brand-gold hover:text-brand-dark font-semibold text-xs rounded-xl transition-all">
+                                Baca Artikel <i class="fa-solid fa-chevron-right ml-1 text-[10px]"></i>
+                            </button>
+                        </div>
+                    </div>
+                `;
+                container.innerHTML += card;
+            });
+        }
+
+        function openNewsModal(id) {
+            const item = newsData.find(n => n.id === id);
+            if (!item) return;
+
+            document.getElementById('modal-title').innerText = item.title;
+            document.getElementById('modal-category').innerText = item.categoryLabel;
+            document.getElementById('modal-date').innerText = item.date;
+            document.getElementById('modal-author').innerText = item.author;
+            document.getElementById('modal-image').src = item.image;
+
+            const contentEl = document.getElementById('modal-content');
+            contentEl.innerHTML = '';
+            item.content.forEach(para => {
+                contentEl.innerHTML += `<p>${para}</p>`;
+            });
+
+            document.getElementById('news-modal').classList.remove('hidden');
+        }
+
+        function closeNewsModal() {
+            document.getElementById('news-modal').classList.add('hidden');
+        }
+
+        function filterNews(cat, btn) {
+            currentCategory = cat;
+            document.querySelectorAll('.btn-news-filter').forEach(b => {
+                b.className = 'btn-news-filter px-4 py-2 bg-white text-gray-700 hover:bg-brand-dark hover:text-brand-gold rounded-xl text-xs font-semibold shadow-sm transition-all border border-gray-200';
+            });
+            btn.className = 'btn-news-filter px-4 py-2 bg-brand-dark text-brand-gold rounded-xl text-xs font-semibold shadow-sm transition-all border border-brand-dark';
+
+            applyFilters();
+        }
+
+        function searchNews() {
+            applyFilters();
+        }
+
+        function applyFilters() {
+            const keyword = document.getElementById('news-search').value.toLowerCase();
+            const filtered = newsData.filter(n => {
+                const matchCat = currentCategory === 'all' || n.category === currentCategory;
+                const matchKeyword = n.title.toLowerCase().includes(keyword) || n.summary.toLowerCase().includes(keyword);
+                return matchCat && matchKeyword;
+            });
+            renderNews(filtered);
+        }
+
+        function handleSubscribe(e) {
+            e.preventDefault();
+            alert('Terima kasih telah berlangganan Warta DKR Leuwigoong! Email Anda berhasil terdaftar.');
+            e.target.reset();
+        }
+
+        document.getElementById('mobile-menu-btn').addEventListener('click', () => {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            renderNews(newsData);
+        });
+    </script>
+</body>
+
+</html>

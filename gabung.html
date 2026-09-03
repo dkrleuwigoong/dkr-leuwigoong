@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="id" class="h-full">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gabung Bersama Kami - Dewan Kerja Ranting Leuwigoong</title>
+
+    <!-- Google Fonts: Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            gold: '#E09F27',
+                            'gold-hover': '#C6871A',
+                            dark: '#16120B',
+                            'dark-card': '#1E1810',
+                            card: '#FAF7F2',
+                            footer: '#110D07',
+                            bg: '#F5F2EB'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-brand-bg text-gray-800 font-sans flex flex-col min-h-full antialiased">
+
+    <!-- NAVBAR -->
+    <nav class="sticky top-0 z-40 bg-brand-dark/95 backdrop-blur-md border-b border-white/5 py-3">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="beranda.html" class="flex items-center gap-3">
+                <img src="assets/img/dkr-logo.png" alt="Logo DKR Leuwigoong"
+                    class="w-10 h-10 object-contain drop-shadow-md"
+                    onerror="this.onerror=null; this.src='https://via.placeholder.com/40?text=DKR';">
+                <div>
+                    <span
+                        class="block text-[10px] font-semibold text-amber-500 uppercase tracking-widest leading-none">Dewan
+                        Kerja Ranting</span>
+                    <span
+                        class="block text-lg font-extrabold text-white tracking-tight leading-tight mt-0.5">LEUWIGOONG</span>
+                </div>
+            </a>
+
+            <!-- Nav Links -->
+            <div class="hidden md:flex items-center space-x-6 text-xs uppercase font-semibold text-gray-300">
+                <a href="beranda.html" class="hover:text-brand-gold transition-colors">Beranda</a>
+                <a href="tentang.html" class="hover:text-brand-gold transition-colors">Tentang</a>
+                <a href="program.html" class="hover:text-brand-gold transition-colors">Program</a>
+                <a href="agenda.html" class="hover:text-brand-gold transition-colors">Agenda</a>
+                <a href="berita.html" class="hover:text-brand-gold transition-colors">Berita</a>
+                <a href="galeri.html" class="hover:text-brand-gold transition-colors">Galeri</a>
+                <a href="kontak.html" class="hover:text-brand-gold transition-colors">Kontak</a>
+            </div>
+
+            <!-- CTA -->
+            <div class="hidden md:block">
+                <a href="gabung.html"
+                    class="px-5 py-2.5 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-brand-dark font-bold text-xs rounded-xl shadow-md transition-all hover:-translate-y-0.5 border border-amber-400">
+                    Gabung Bersama Kami
+                </a>
+            </div>
+
+            <!-- Mobile Button -->
+            <button id="mobile-menu-btn" class="md:hidden text-gray-300 hover:text-white text-xl focus:outline-none">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu"
+            class="hidden md:hidden px-4 pt-3 pb-4 space-y-2 border-t border-white/10 mt-2 text-xs font-semibold uppercase text-gray-300">
+            <a href="beranda.html" class="block py-2 hover:text-brand-gold">Beranda</a>
+            <a href="tentang.html" class="block py-2 hover:text-brand-gold">Tentang</a>
+            <a href="program.html" class="block py-2 hover:text-brand-gold">Program</a>
+            <a href="agenda.html" class="block py-2 hover:text-brand-gold">Agenda</a>
+            <a href="berita.html" class="block py-2 hover:text-brand-gold">Berita</a>
+            <a href="galeri.html" class="block py-2 hover:text-brand-gold">Galeri</a>
+            <a href="kontak.html" class="block py-2 hover:text-brand-gold">Kontak</a>
+            <a href="gabung.html"
+                class="block text-center mt-3 py-2.5 bg-brand-gold text-brand-dark font-bold rounded-xl">Gabung Bersama
+                Kami</a>
+        </div>
+    </nav>
+
+    <!-- HEADER PAGE -->
+    <header
+        class="relative bg-gradient-to-b from-brand-dark/90 to-brand-dark/95 text-white py-16 px-4 sm:px-6 lg:px-8 text-center bg-cover bg-center"
+        style="background-image: linear-gradient(180deg, rgba(22, 18, 11, 0.88) 0%, rgba(22, 18, 11, 0.96) 100%), url('assets/img/foto-dkr-1.jpeg');">
+        <div class="max-w-3xl mx-auto">
+            <span
+                class="inline-block px-3 py-1 bg-amber-500/20 text-amber-400 uppercase tracking-widest font-bold text-[11px] rounded-md mb-3">
+                Pendaftaran & Keanggotaan
+            </span>
+            <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-3 tracking-tight">Gabung Bersama Kami</h1>
+            <p class="text-gray-300 text-sm sm:text-base max-w-xl mx-auto">
+                Isi formulir pendaftaran di bawah ini untuk mendaftarkan diri Anda sebagai calon pengurus DKR
+                Leuwigoong.
+            </p>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main class="flex-grow py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+
+            <!-- KOTAK INFORMASI JADWAL PENDAFTARAN -->
+            <div
+                class="bg-gradient-to-r from-amber-500/10 via-amber-500/5 to-transparent border border-amber-500/20 rounded-3xl p-6 sm:p-8 backdrop-blur-sm">
+            
+                <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+            
+                    <div class="space-y-3">
+                        <!-- Status -->
+                        <div
+                            class="inline-flex items-center gap-2 px-3 py-1 bg-amber-500 text-brand-dark rounded-full font-bold text-[11px] uppercase tracking-wider">
+                            <i class="fa-solid fa-circle-info"></i>
+                            Informasi Pendaftaran
+                        </div>
+            
+                        <h2 class="text-xl sm:text-2xl font-extrabold text-gray-900">
+                            Pendaftaran Anggota Baru Belum Dibuka
+                        </h2>
+            
+                        <p class="text-xs sm:text-sm text-gray-600 max-w-2xl leading-relaxed">
+                            Dewan Kerja Ranting Leuwigoong saat ini belum membuka pendaftaran
+                            anggota baru. Informasi mengenai jadwal dan mekanisme pendaftaran
+                            akan diumumkan melalui website resmi dan kanal informasi DKR
+                            Leuwigoong.
+                        </p>
+                    </div>
+            
+                </div>
+            
+                <!-- Information Card -->
+                <div class="mt-6">
+                    <div
+                        class="bg-white p-5 sm:p-6 rounded-2xl border border-gray-200/80 shadow-sm flex flex-col sm:flex-row items-start sm:items-center gap-4">
+            
+                        <div class="w-12 h-12 shrink-0 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center">
+                            <i class="fa-solid fa-hourglass-half text-lg"></i>
+                        </div>
+            
+                        <div>
+                            <h3 class="text-sm sm:text-base font-bold text-gray-900 mb-1">
+                                Menunggu Pembukaan Pendaftaran
+                            </h3>
+            
+                            <p class="text-xs sm:text-sm text-gray-500 leading-relaxed">
+                                Silakan pantau informasi terbaru dari DKR Leuwigoong.
+                                Pendaftaran akan dibuka apabila telah tersedia jadwal resmi.
+                            </p>
+                        </div>
+            
+                    </div>
+                </div>
+            
+            </div>
+
+            <!-- SECTION FORM & SYARAT -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+
+                <!-- INFORMASI & SYARAT -->
+                <div class="lg:col-span-5 space-y-6">
+                    <div
+                        class="bg-brand-dark text-white rounded-3xl p-6 sm:p-8 shadow-xl border border-white/5 relative overflow-hidden">
+                        <span class="text-amber-500 font-bold text-xs uppercase tracking-wider block mb-2">Petunjuk
+                            Pendaftaran</span>
+                        <h2 class="text-xl sm:text-2xl font-extrabold mb-4 leading-snug">Persyaratan Umum Pendaftar</h2>
+
+                        <ul class="space-y-3.5 text-xs text-gray-300">
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-circle-check text-amber-500 mt-0.5 shrink-0"></i>
+                                <span>Pramuka Penegak (SMA/SMK/MA) atau Pandega (Perguruan Tinggi) aktif di wilayah
+                                    Leuwigoong.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-circle-check text-amber-500 mt-0.5 shrink-0"></i>
+                                <span>Telah dilantik minimal menjadi **Penegak Bantara** atau **Pandega**.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-circle-check text-amber-500 mt-0.5 shrink-0"></i>
+                                <span>Mendapatkan izin tertulis dari Pembina Gudep / Pradana Ambalan asal.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-circle-check text-amber-500 mt-0.5 shrink-0"></i>
+                                <span>Memiliki komitmen serta semangat tinggi untuk berkarya dalam kepramukaan.</span>
+                            </li>
+                        </ul>
+
+                        <div class="mt-8 pt-6 border-t border-white/10 flex items-center gap-3">
+                            <div
+                                class="w-10 h-10 rounded-full bg-brand-gold text-brand-dark flex items-center justify-center font-bold text-sm">
+                                <i class="fa-solid fa-shield-halved"></i>
+                            </div>
+                            <div class="text-xs">
+                                <p class="text-gray-400">Penyimpanan Otomatis</p>
+                                <p class="font-bold text-white">Data Tersimpan Aman di Perangkat Anda</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FORMULIR PENDAFTARAN -->
+                <div class="lg:col-span-7">
+                    <div class="bg-white rounded-3xl border border-gray-200/80 shadow-md p-6 sm:p-8">
+                        <div class="mb-6">
+                            <h3 class="text-xl font-extrabold text-gray-900 mb-1">Formulir Registrasi Anggota</h3>
+                            <p class="text-xs text-gray-500">Isi formulir dengan data yang benar. Data akan tersimpan
+                                secara otomatis.</p>
+                        </div>
+
+                        <form id="pendaftaranForm" onsubmit="saveToLocalStorage(event)" class="space-y-4">
+                            <div>
+                                <label
+                                    class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-1.5">Nama
+                                    Lengkap *</label>
+                                <input type="text" id="nama" required placeholder="Sesuai KTA atau Kartu Pelajar"
+                                    class="w-full px-4 py-2.5 bg-gray-50 border border-gray-200 rounded-xl text-xs focus:outline-none focus:border-brand-gold focus:bg-white transition-all">
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label
+                                        class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-1.5">NTA
+                                        / NISN *</label>
+                                    <input type="text" id="nta" required placeholder="Nomor Tanda Anggota"
+                                        class="w-full px-4 py-2.5 bg-gray-50 border border-gray-200 rounded-xl text-xs focus:outline-none focus:border-brand-gold focus:bg-white transition-all">
+                                </div>
+                                <div>
+                                    <label
+                                        class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-1.5">Tingkatan
+                                        Pramuka *</label>
+                                    <select id="tingkatan" required
+                                        class="w-full px-4 py-2.5 bg-gray-50 border border-gray-200 rounded-xl text-xs text-gray-700 focus:outline-none focus:border-brand-gold focus:bg-white transition-all">
+                                        <option value="">-- Pilih Tingkatan --</option>
+                                        <option value="Penegak Bantara">Penegak Bantara</option>
+                                        <option value="Penegak Laksana">Penegak Laksana</option>
+                                        <option value="Pandega">Pandega</option>
+                                        <option value="Pembina / Pendamping">Pembina / Pendamping</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label
+                                        class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-1.5">Pangkalan
+                                        / Sekolah *</label>
+                                    <input type="text" id="pangkalan" required placeholder="Contoh: SMAN 1 Leuwigoong"
+                                        class="w-full px-4 py-2.5 bg-gray-50 border border-gray-200 rounded-xl text-xs focus:outline-none focus:border-brand-gold focus:bg-white transition-all">
+                                </div>
+                                <div>
+                                    <label
+                                        class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-1.5">Nama
+                                        Ambalan / Racana</label>
+                                    <input type="text" id="ambalan" placeholder="Contoh: Prabu Siliwangi - Subanglarang"
+                                        class="w-full px-4 py-2.5 bg-gray-50 border border-gray-200 rounded-xl text-xs focus:outline-none focus:border-brand-gold focus:bg-white transition-all">
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label
+                                        class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-1.5">Nomor
+                                        WhatsApp *</label>
+                                    <input type="tel" id="whatsapp" required placeholder="08xxxxxxxxxx"
+                                        class="w-full px-4 py-2.5 bg-gray-50 border border-gray-200 rounded-xl text-xs focus:outline-none focus:border-brand-gold focus:bg-white transition-all">
+                                </div>
+                                <div>
+                                    <label
+                                        class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-1.5">Alamat
+                                        Email *</label>
+                                    <input type="email" id="email" required placeholder="nama@email.com"
+                                        class="w-full px-4 py-2.5 bg-gray-50 border border-gray-200 rounded-xl text-xs focus:outline-none focus:border-brand-gold focus:bg-white transition-all">
+                                </div>
+                            </div>
+
+                            <div>
+                                <label
+                                    class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-1.5">Bidang
+                                    / Peminatan *</label>
+                                <select id="bidang" required
+                                    class="w-full px-4 py-2.5 bg-gray-50 border border-gray-200 rounded-xl text-xs text-gray-700 focus:outline-none focus:border-brand-gold focus:bg-white transition-all">
+                                    <option value="">-- Pilih Bidang DKR --</option>
+                                    <option value="Kajian Kepramukaan">Kajian Kepramukaan</option>
+                                    <option value="Giat Operasional & Pelatihan">Giat Operasional & Pelatihan</option>
+                                    <option value="Pengabdian Masyarakat (Pramuka Peduli)">Pengabdian Masyarakat
+                                        (Pramuka Peduli)</option>
+                                    <option value="Humas, Publikasi & Media Informasi">Humas, Publikasi & Media
+                                        Informasi</option>
+                                    <option value="Relawan / Partisipan Kegiatan">Relawan / Partisipan Kegiatan</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label
+                                    class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-1.5">Alasan
+                                    & Motivasi Bergabung *</label>
+                                <textarea id="motivasi" required rows="3" placeholder="Ceritakan motivasi Anda..."
+                                    class="w-full px-4 py-2.5 bg-gray-50 border border-gray-200 rounded-xl text-xs focus:outline-none focus:border-brand-gold focus:bg-white transition-all"></textarea>
+                            </div>
+
+                            <div class="pt-2">
+                                <button type="submit" id="btnSubmit"
+                                    class="w-full py-3.5 bg-brand-gold hover:bg-amber-600 text-brand-dark font-extrabold text-xs uppercase tracking-wider rounded-xl shadow-md transition-all flex items-center justify-center gap-2">
+                                    <i class="fa-solid fa-paper-plane text-sm"></i> Kirim Formulir Pendaftaran
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-brand-footer text-gray-400 text-xs py-10 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 pb-8 border-b border-white/10">
+                <div>
+                    <div class="flex items-center gap-2 mb-3">
+                        <img src="assets/img/dkr-logo.png" alt="Logo DKR" class="w-7 h-7 object-contain"
+                            onerror="this.onerror=null; this.src='https://via.placeholder.com/30?text=DKR';">
+                        <span class="font-extrabold text-white text-sm">LEUWIGOONG</span>
+                    </div>
+                    <p class="text-gray-400 leading-relaxed">
+                        Wadah bagi Pramuka Penegak dan Pandega untuk berkarya, berinovasi, dan berdampak nyata bagi
+                        masyarakat.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold uppercase tracking-wider mb-3">Kontak Kami</h4>
+                    <ul class="space-y-2">
+                        <li><i class="fa-solid fa-location-dot text-amber-500 mr-2"></i>Jl. Raya Leuwigoong No. 123,
+                            Garut 44192</li>
+                        <li><i class="fa-solid fa-phone text-amber-500 mr-2"></i>+62 812-3456-7890</li>
+                        <li><i class="fa-solid fa-envelope text-amber-500 mr-2"></i>dkrleuwigoong@gmail.com</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold uppercase tracking-wider mb-3">Media Sosial</h4>
+                    <div class="flex gap-2">
+                        <a href="#"
+                            class="w-8 h-8 rounded-lg bg-white/5 flex items-center justify-center text-gray-300 hover:bg-brand-gold hover:text-brand-dark transition-all"><i
+                                class="fa-brands fa-instagram"></i></a>
+                        <a href="#"
+                            class="w-8 h-8 rounded-lg bg-white/5 flex items-center justify-center text-gray-300 hover:bg-brand-gold hover:text-brand-dark transition-all"><i
+                                class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"
+                            class="w-8 h-8 rounded-lg bg-white/5 flex items-center justify-center text-gray-300 hover:bg-brand-gold hover:text-brand-dark transition-all"><i
+                                class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="pt-6 text-center text-gray-500 text-[11px]">
+                &copy; 2026 Dewan Kerja Ranting Leuwigoong. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- SCRIPT LOCALSTORAGE -->
+    <script>
+        const STORAGE_KEY = 'dkr_pendaftaran_data';
+
+        // Simpan data form ke localStorage tanpa menampilkan tabel
+        function saveToLocalStorage(e) {
+            e.preventDefault();
+
+            const pendaftarData = {
+                id: 'DKR-LWG/' + Math.floor(1000 + Math.random() * 9000),
+                nama: document.getElementById('nama').value,
+                nta: document.getElementById('nta').value,
+                tingkatan: document.getElementById('tingkatan').value,
+                pangkalan: document.getElementById('pangkalan').value,
+                ambalan: document.getElementById('ambalan').value || '-',
+                whatsapp: document.getElementById('whatsapp').value,
+                email: document.getElementById('email').value,
+                bidang: document.getElementById('bidang').value,
+                motivasi: document.getElementById('motivasi').value,
+                tanggal: new Date().toLocaleDateString('id-ID', { day: 'numeric', month: 'long', year: 'numeric' })
+            };
+
+            // Ambil data lama jika ada
+            let currentList = JSON.parse(localStorage.getItem(STORAGE_KEY)) || [];
+            currentList.push(pendaftarData);
+
+            // Simpan kembali ke localStorage
+            localStorage.setItem(STORAGE_KEY, JSON.stringify(currentList));
+
+            alert('Terima kasih! Formulir pendaftaran Anda berhasil terkirim dan tersimpan.');
+            document.getElementById('pendaftaranForm').reset();
+        }
+
+        // Toggle Mobile Menu
+        document.getElementById('mobile-menu-btn').addEventListener('click', () => {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
+</body>
+
+</html>

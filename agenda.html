@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="id" class="h-full">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda & Kalender Kegiatan - Dewan Kerja Ranting Leuwigoong</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap"
+        rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            gold: '#E09F27',
+                            'gold-hover': '#C6871A',
+                            dark: '#16120B',
+                            'dark-card': '#1E1810',
+                            card: '#FAF7F2',
+                            footer: '#110D07',
+                            bg: '#F5F2EB'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-brand-bg text-gray-800 font-sans flex flex-col min-h-full antialiased">
+
+    <nav class="sticky top-0 z-40 bg-brand-dark/95 backdrop-blur-md border-b border-white/5 py-3">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+            <a href="beranda.html" class="flex items-center gap-3">
+                <img src="assets/img/dkr-logo.png" alt="Logo DKR Leuwigoong"
+                    class="w-10 h-10 object-contain drop-shadow-md"
+                    onerror="this.onerror=null; this.src='https://via.placeholder.com/40?text=DKR';">
+                <div>
+                    <span
+                        class="block text-[10px] font-semibold text-amber-500 uppercase tracking-widest leading-none">Dewan
+                        Kerja Ranting</span>
+                    <span
+                        class="block text-lg font-extrabold text-white tracking-tight leading-tight mt-0.5">LEUWIGOONG</span>
+                </div>
+            </a>
+
+            <div class="hidden md:flex items-center space-x-6 text-xs uppercase font-semibold text-gray-300">
+                <a href="beranda.html" class="hover:text-brand-gold transition-colors">Beranda</a>
+                <a href="tentang.html" class="hover:text-brand-gold transition-colors">Tentang</a>
+                <a href="program.html" class="hover:text-brand-gold transition-colors">Program</a>
+                <a href="agenda.html" class="text-brand-gold relative py-1 border-b-2 border-brand-gold">Agenda</a>
+                <a href="berita.html" class="hover:text-brand-gold transition-colors">Berita</a>
+                <a href="galeri.html" class="hover:text-brand-gold transition-colors">Galeri</a>
+                <a href="kontak.html" class="hover:text-brand-gold transition-colors">Kontak</a>
+            </div>
+
+            <div class="hidden md:block">
+                <a href="#"
+                    class="px-5 py-2.5 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-brand-dark hover:text-white font-bold text-xs rounded-xl shadow-md transition-all hover:-translate-y-0.5">
+                    Gabung Bersama Kami
+                </a>
+            </div>
+
+            <button id="mobile-menu-btn" class="md:hidden text-gray-300 hover:text-white text-xl focus:outline-none">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <div id="mobile-menu"
+            class="hidden md:hidden px-4 pt-3 pb-4 space-y-2 border-t border-white/10 mt-2 text-xs font-semibold uppercase text-gray-300">
+            <a href="beranda.html" class="block py-2 hover:text-brand-gold">Beranda</a>
+            <a href="tentang.html" class="block py-2 hover:text-brand-gold">Tentang</a>
+            <a href="program.html" class="block py-2 hover:text-brand-gold">Program</a>
+            <a href="agenda.html" class="block py-2 text-brand-gold">Agenda</a>
+            <a href="#" class="block py-2 hover:text-brand-gold">Berita</a>
+            <a href="#" class="block py-2 hover:text-brand-gold">Galeri</a>
+            <a href="#" class="block py-2 hover:text-brand-gold">Kontak</a>
+            <a href="#" class="block text-center mt-3 py-2.5 bg-brand-gold text-brand-dark font-bold rounded-xl">Gabung
+                Bersama Kami</a>
+        </div>
+    </nav>
+
+    <header
+        class="relative bg-gradient-to-b from-brand-dark/90 to-brand-dark/95 text-white py-16 px-4 sm:px-6 lg:px-8 text-center bg-cover bg-center"
+        style="background-image: linear-gradient(180deg, rgba(22, 18, 11, 0.88) 0%, rgba(22, 18, 11, 0.96) 100%), url('https://images.unsplash.com/photo-1506784983877-45594efa4cbe?q=80&w=1600&auto=format&fit=crop');">
+        <div class="max-w-3xl mx-auto">
+            <span
+                class="inline-block px-3 py-1 bg-amber-500/20 text-amber-400 uppercase tracking-widest font-bold text-[11px] rounded-md mb-3">
+                Jadwal & Agenda Terintegrasi
+            </span>
+            <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-3 tracking-tight">Agenda Kegiatan</h1>
+            <p class="text-gray-300 text-sm sm:text-base max-w-xl mx-auto">
+                Pantau seluruh jadwal pelatihan, rapat, perkemahan, dan aksi sosial Pramuka Penegak & Pandega
+                Leuwigoong.
+            </p>
+        </div>
+    </header>
+
+    <main class="flex-grow py-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
+                <div class="bg-white p-4 rounded-2xl border border-amber-500/20 shadow-sm flex items-center gap-3">
+                    <div
+                        class="w-11 h-11 rounded-xl bg-amber-500/10 text-brand-gold flex items-center justify-center text-lg font-bold">
+                        <i class="fa-solid fa-calendar-days"></i>
+                    </div>
+                    <div>
+                        <span class="block text-xs text-gray-500 font-medium">Total Agenda</span>
+                        <strong id="stat-total-agenda" class="text-lg font-extrabold text-gray-800">0</strong>
+                    </div>
+                </div>
+
+                <div class="bg-white p-4 rounded-2xl border border-amber-500/20 shadow-sm flex items-center gap-3">
+                    <div
+                        class="w-11 h-11 rounded-xl bg-amber-500/10 text-brand-gold flex items-center justify-center text-lg font-bold">
+                        <i class="fa-solid fa-clock"></i>
+                    </div>
+                    <div>
+                        <span class="block text-xs text-gray-500 font-medium">Mendatang</span>
+                        <strong id="stat-upcoming" class="text-lg font-extrabold text-gray-800">0</strong>
+                    </div>
+                </div>
+
+                <div class="bg-white p-4 rounded-2xl border border-amber-500/20 shadow-sm flex items-center gap-3">
+                    <div
+                        class="w-11 h-11 rounded-xl bg-amber-500/10 text-brand-gold flex items-center justify-center text-lg font-bold">
+                        <i class="fa-solid fa-bolt"></i>
+                    </div>
+                    <div>
+                        <span class="block text-xs text-gray-500 font-medium">Sedang Berlangsung</span>
+                        <strong id="stat-ongoing" class="text-lg font-extrabold text-gray-800">0</strong>
+                    </div>
+                </div>
+
+                <div class="bg-white p-4 rounded-2xl border border-amber-500/20 shadow-sm flex items-center gap-3">
+                    <div
+                        class="w-11 h-11 rounded-xl bg-amber-500/10 text-brand-gold flex items-center justify-center text-lg font-bold">
+                        <i class="fa-solid fa-square-check"></i>
+                    </div>
+                    <div>
+                        <span class="block text-xs text-gray-500 font-medium">Selesai</span>
+                        <strong id="stat-completed" class="text-lg font-extrabold text-gray-800">0</strong>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex flex-col md:flex-row gap-4 items-center justify-between mb-8">
+                <div class="flex flex-wrap gap-2 justify-center md:justify-start w-full md:w-auto">
+                    <button onclick="filterAgenda('all', this)"
+                        class="btn-agenda-filter px-4 py-2 bg-brand-dark text-brand-gold rounded-xl text-xs font-semibold shadow-sm transition-all border border-brand-dark">Semua</button>
+                    <button onclick="filterAgenda('upcoming', this)"
+                        class="btn-agenda-filter px-4 py-2 bg-white text-gray-700 hover:bg-brand-dark hover:text-brand-gold rounded-xl text-xs font-semibold shadow-sm transition-all border border-gray-200">Akan
+                        Datang</button>
+                    <button onclick="filterAgenda('ongoing', this)"
+                        class="btn-agenda-filter px-4 py-2 bg-white text-gray-700 hover:bg-brand-dark hover:text-brand-gold rounded-xl text-xs font-semibold shadow-sm transition-all border border-gray-200">Sedang
+                        Berlangsung</button>
+                    <button onclick="filterAgenda('completed', this)"
+                        class="btn-agenda-filter px-4 py-2 bg-white text-gray-700 hover:bg-brand-dark hover:text-brand-gold rounded-xl text-xs font-semibold shadow-sm transition-all border border-gray-200">Selesai</button>
+                </div>
+
+                <div class="flex items-center gap-3 w-full md:w-auto">
+                    <div class="relative flex-grow md:w-64">
+                        <i
+                            class="fa-solid fa-magnifying-glass absolute left-3.5 top-1/2 -translate-y-1/2 text-gray-400 text-xs"></i>
+                        <input type="text" id="agenda-search" onkeyup="searchAgenda()"
+                            placeholder="Cari nama/lokasi agenda..."
+                            class="w-full pl-9 pr-4 py-2 bg-white border border-gray-200 rounded-xl text-xs focus:outline-none focus:border-brand-gold focus:ring-1 focus:ring-brand-gold">
+                    </div>
+
+                    <div class="flex bg-white border border-gray-200 rounded-xl p-1 shadow-sm">
+                        <button onclick="setViewMode('grid')" id="view-grid-btn"
+                            class="px-3 py-1 bg-brand-dark text-brand-gold rounded-lg text-xs font-bold transition-all"><i
+                                class="fa-solid fa-border-all"></i></button>
+                        <button onclick="setViewMode('list')" id="view-list-btn"
+                            class="px-3 py-1 text-gray-500 hover:text-gray-900 rounded-lg text-xs font-bold transition-all"><i
+                                class="fa-solid fa-list"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="agenda-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+            </div>
+
+            <div
+                class="bg-gradient-to-r from-brand-dark via-amber-950 to-brand-dark text-white rounded-3xl p-6 sm:p-8 shadow-xl border border-amber-500/20 relative overflow-hidden">
+                <div class="absolute -right-10 -bottom-10 w-64 h-64 bg-amber-500/10 rounded-full blur-3xl"></div>
+                <div class="relative z-10 flex flex-col md:flex-row items-center justify-between gap-6">
+                    <div class="space-y-2 text-center md:text-left">
+                        <span
+                            class="px-3 py-1 bg-amber-500 text-brand-dark text-[10px] font-extrabold uppercase rounded-full">Agenda
+                            Utama Tahun Ini</span>
+                        <h2 class="text-2xl sm:text-3xl font-extrabold">Open Recruitment Saka Bhayangkara Ranting Leuwigoong</h2>
+                        <p class="text-xs sm:text-sm text-gray-300 max-w-xl">
+                            Open Recruitment untuk menjadi bagian dari Satuan Karya Bhayangkara Ranting Leuwigoong. Siapkan
+                            dirimu dan jadilah bagian dari tim yang berdedikasi!
+                        </p>
+                    </div>
+                    <div class="flex flex-col sm:flex-row gap-3 w-full md:w-auto">
+                        <button onclick="openAgendaModal(2)"
+                            class="px-6 py-3 bg-brand-gold hover:bg-amber-600 text-brand-dark font-extrabold text-xs rounded-xl shadow-lg transition-all text-center">
+                            <i class="fa-solid fa-circle-info mr-1"></i> Rincian Open Recruitment
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <div id="agenda-modal"
+        class="fixed inset-0 z-50 hidden bg-black/60 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl max-w-lg w-full p-6 shadow-2xl relative max-h-[90vh] overflow-y-auto">
+            <div class="flex items-center justify-between pb-3 border-b border-gray-100">
+                <span id="modal-status-badge"
+                    class="px-2.5 py-1 bg-amber-500/10 text-amber-600 font-bold text-[10px] rounded-md uppercase tracking-wider">Akan
+                    Datang</span>
+                <button onclick="closeAgendaModal()" class="text-gray-400 hover:text-gray-600 text-lg">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <div class="py-4">
+                <h3 id="modal-title" class="text-xl font-extrabold text-gray-900 mb-2">Nama Agenda</h3>
+
+                <div class="space-y-2 mb-4 bg-brand-bg p-3.5 rounded-xl text-xs">
+                    <div class="flex items-center text-gray-700">
+                        <i class="fa-regular fa-calendar text-amber-500 w-5"></i>
+                        <span id="modal-date" class="font-bold">12 Oktober 2026</span>
+                    </div>
+                    <div class="flex items-center text-gray-700">
+                        <i class="fa-regular fa-clock text-amber-500 w-5"></i>
+                        <span id="modal-time">08.00 WIB - Selesai</span>
+                    </div>
+                    <div class="flex items-center text-gray-700">
+                        <i class="fa-solid fa-location-dot text-amber-500 w-5"></i>
+                        <span id="modal-location">Lapangan Ranting Leuwigoong</span>
+                    </div>
+                    <div class="flex items-center text-gray-700">
+                        <i class="fa-solid fa-user-gear text-amber-500 w-5"></i>
+                        <span id="modal-organizer">Penanggung Jawab: Bidang Kegiatan</span>
+                    </div>
+                </div>
+
+                <p id="modal-desc" class="text-xs text-gray-600 leading-relaxed mb-4">Deskripsi agenda.</p>
+
+                <h4 class="text-xs font-bold text-gray-900 mb-2">Estimasi Rundown:</h4>
+                <ul id="modal-rundown" class="text-xs text-gray-600 space-y-1.5 mb-4 pl-2 border-l-2 border-amber-500">
+                </ul>
+
+                <h4 class="text-xs font-bold text-gray-900 mb-1">Ketentuan Peserta:</h4>
+                <p id="modal-requirements" class="text-xs text-gray-600 leading-relaxed mb-4">-</p>
+            </div>
+
+            <div class="flex flex-col sm:flex-row justify-end gap-2 pt-3 border-t border-gray-100">
+                <button onclick="closeAgendaModal()"
+                    class="px-4 py-2 bg-gray-100 hover:bg-gray-200 text-gray-700 font-semibold text-xs rounded-xl transition-colors">Tutup</button>
+                <a id="modal-register-btn" href="#" target="_blank"
+                    class="px-4 py-2 bg-brand-gold hover:bg-amber-600 text-brand-dark font-bold text-xs rounded-xl shadow-sm transition-colors text-center">
+                    <i class="fa-solid fa-pen-to-square mr-1"></i> Daftar Kegiatan
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-brand-footer text-gray-400 text-xs py-10 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 pb-8 border-b border-white/10">
+                <div>
+                    <div class="flex items-center gap-2 mb-3">
+                        <img src="assets/img/dkr-logo.png" alt="Logo DKR" class="w-7 h-7 object-contain"
+                            onerror="this.onerror=null; this.src='https://via.placeholder.com/30?text=DKR';">
+                        <span class="font-extrabold text-white text-sm">LEUWIGOONG</span>
+                    </div>
+                    <p class="text-gray-400 leading-relaxed">
+                        Wadah bagi Pramuka Penegak dan Pandega untuk berkarya, berinovasi, dan berdampak nyata bagi
+                        masyarakat.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold uppercase tracking-wider mb-3">Kontak Kami</h4>
+                    <ul class="space-y-2">
+                        <li><i class="fa-solid fa-location-dot text-amber-500 mr-2"></i>Jl. Raya Leuwigoong No. 123,
+                            Garut 44192</li>
+                        <li><i class="fa-solid fa-phone text-amber-500 mr-2"></i>+62 812-3456-7890</li>
+                        <li><i class="fa-solid fa-envelope text-amber-500 mr-2"></i>dkrleuwigoong@gmail.com</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold uppercase tracking-wider mb-3">Media Sosial</h4>
+                    <div class="flex gap-2">
+                        <a href="#"
+                            class="w-8 h-8 rounded-lg bg-white/5 flex items-center justify-center text-gray-300 hover:bg-brand-gold hover:text-brand-dark transition-all"><i
+                                class="fa-brands fa-instagram"></i></a>
+                        <a href="#"
+                            class="w-8 h-8 rounded-lg bg-white/5 flex items-center justify-center text-gray-300 hover:bg-brand-gold hover:text-brand-dark transition-all"><i
+                                class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"
+                            class="w-8 h-8 rounded-lg bg-white/5 flex items-center justify-center text-gray-300 hover:bg-brand-gold hover:text-brand-dark transition-all"><i
+                                class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="pt-6 text-center text-gray-500 text-[11px]">
+                &copy; 2026 Dewan Kerja Ranting Leuwigoong. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // DATA AGENDA INTEGRATED
+        const agendaData = [
+            {
+                id: 1,
+                title: "Rapat Koordinasi Ranting & Evaluasi Ambalan",
+                status: "upcoming",
+                statusLabel: "Akan Datang",
+                statusClass: "bg-amber-500/10 text-amber-600 border border-amber-500/20",
+                date: "25 September 2026",
+                day: "25",
+                month: "SEP",
+                time: "13.30 - 17.00 WIB",
+                location: "Sanggar DKR Leuwigoong",
+                organizer: "Sekretariat DKR",
+                desc: "Pertemuan rutin pengurus DKR bersama para Pradana dan Pembina Ambalan se-Kecamatan Leuwigoong untuk penyelarasan agenda triwulan akhir.",
+                rundown: [
+                    "13.30 - Registrasi & Pembukaan",
+                    "14.00 - Pemaparan Evaluasi Program Triwulan 3",
+                    "15.30 - Istirahat & Sholat",
+                    "16.00 - Diskusi & FDT Persiapan GWR 2026",
+                    "17.00 - Penutup"
+                ],
+                requirements: "Wajib diwakili oleh Pradana atau Utusan Ambalan resmi (membawa Surat Tugas).",
+                linkRegister: "#"
+            },
+            {
+                id: 2,
+                title: "Gladi Widya Ranting Leuwigoong 2026",
+                status: "upcoming",
+                statusLabel: "Akan Datang",
+                statusClass: "bg-amber-500/10 text-amber-600 border border-amber-500/20",
+                date: "12 - 14 Oktober 2026",
+                day: "12",
+                month: "OKT",
+                time: "08.00 WIB (3 Hari)",
+                location: "Lapangan Sepakbola Leuwigoong",
+                organizer: "Bidang Kegiatan DKR",
+                desc: "Ajang perlombaan keterampilan, wawasan, dan ketangkasan bagi Pramuka Penegak se-Ranting Leuwigoong.",
+                rundown: [
+                    "Hari 1: Upacara Pembukaan, Lomba Pionering, TTG",
+                    "Hari 2: Giat Jelajah, Navigasi Darat, Pentas Seni",
+                    "Hari 3: Upacara Penutupan & Pengumuman Juara Umum"
+                ],
+                requirements: "Satu sangga terdiri dari 8 orang Penegak Aktif berpakaian Pramuka Lengkap.",
+                linkRegister: "#"
+            },
+            {
+                id: 3,
+                title: "Pelatihan Digital Marketing & Media Pramuka",
+                status: "ongoing",
+                statusLabel: "Sedang Berlangsung",
+                statusClass: "bg-emerald-500/10 text-emerald-600 border border-emerald-500/20",
+                date: "03 September 2026",
+                day: "03",
+                month: "SEP",
+                time: "09.00 - 15.00 WIB",
+                location: "Aula SMAN 1 Leuwigoong",
+                organizer: "Bidang Abdimas & Humas",
+                desc: "Workshop peningkatan kapasitas tim Cyber/Humas Ambalan dalam pembuatan konten publikasi sosial media.",
+                rundown: [
+                    "09.00 - Materi Desain Grafis Canva & Photoshop",
+                    "11.00 - Praktik Video Copywriting",
+                    "13.30 - Praktik Publikasi Website & SEO Dasar"
+                ],
+                requirements: "Membawa Laptop & Smartphone dengan kuota internet aktif.",
+                linkRegister: "#"
+            },
+            {
+                id: 4,
+                title: "Aksi Bersih Aliran Sungai Leuwigoong",
+                status: "completed",
+                statusLabel: "Selesai",
+                statusClass: "bg-gray-500/10 text-gray-600 border border-gray-500/20",
+                date: "15 Agustus 2026",
+                day: "15",
+                month: "AGU",
+                time: "07.00 - 11.00 WIB",
+                location: "Bantaran Sungai Leuwigoong",
+                organizer: "Pramuka Peduli Leuwigoong",
+                desc: "Aksi kolaborasi aksi lingkungan memperingati Hari Pramuka Ke-65 bersama masyarakat lokal.",
+                rundown: [
+                    "07.00 - Apel Kesiapsiagaan Bakti Sosial",
+                    "07.30 - Pembagian Zonasi Bersih-bersih",
+                    "10.30 - Penimbangan Sampah & Penutupan"
+                ],
+                requirements: "Membawa sarung tangan karet dan lapangan outfit.",
+                linkRegister: "#"
+            },
+            {
+                id: 5,
+                title: "Raimuna Ranting & Kemah Bakti 2026",
+                status: "upcoming",
+                statusLabel: "Akan Datang",
+                statusClass: "bg-amber-500/10 text-amber-600 border border-amber-500/20",
+                date: "20 - 22 November 2026",
+                day: "20",
+                month: "NOV",
+                time: "08.00 WIB - Selesai",
+                location: "Bumi Perkemahan Pasir Kunci",
+                organizer: "DKR & Dewan Kehormatan",
+                desc: "Pertemuan besar Pramuka Penegak dan Pandega se-Ranting Leuwigoong penuh pengalaman edukatif dan menyenangkan.",
+                rundown: [
+                    "Hari 1: Mendirikan Tenda, Giat Wisata, Malam Persaudaraan",
+                    "Hari 2: Giat Bakti Desa, Jumpa Tokoh, Api Unggun",
+                    "Hari 3: Sayonara & Baksos Sembako"
+                ],
+                requirements: "Mendaftarkan kontingen via formulir online DKR.",
+                linkRegister: "#"
+            }
+        ];
+
+        let currentStatusFilter = 'all';
+        let currentViewMode = 'grid';
+
+        // RENDER AGENDA CARDS
+        function renderAgenda(data) {
+            const container = document.getElementById('agenda-container');
+            container.innerHTML = '';
+
+            if (data.length === 0) {
+                container.innerHTML = `<div class="col-span-full text-center text-gray-400 py-12"><i class="fa-regular fa-calendar-xmark text-4xl mb-3 block"></i>Agenda kegiatan tidak ditemukan.</div>`;
+                return;
+            }
+
+            data.forEach(item => {
+                let cardHtml = '';
+
+                if (currentViewMode === 'grid') {
+                    cardHtml = `
+                        <div class="bg-brand-card rounded-2xl border border-gray-200/60 p-5 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all flex flex-col justify-between">
+                            <div>
+                                <div class="flex items-start justify-between gap-3 mb-4">
+                                    <div class="flex items-center gap-3">
+                                        <div class="w-12 h-12 bg-brand-dark text-brand-gold rounded-xl flex flex-col items-center justify-center font-bold text-center leading-tight shadow-sm shrink-0">
+                                            <span class="text-sm font-extrabold">${item.day}</span>
+                                            <span class="text-[9px] uppercase tracking-wider text-gray-300">${item.month}</span>
+                                        </div>
+                                        <div>
+                                            <span class="px-2 py-0.5 ${item.statusClass} font-bold text-[10px] rounded-md inline-block mb-1">${item.statusLabel}</span>
+                                            <span class="block text-[11px] text-gray-500"><i class="fa-regular fa-clock text-amber-500 mr-1"></i>${item.time}</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <h3 class="font-bold text-gray-900 text-base mb-2 line-clamp-2">${item.title}</h3>
+                                <p class="text-xs text-gray-500 mb-4 line-clamp-2">${item.desc}</p>
+                            </div>
+
+                            <div>
+                                <div class="pt-3 border-t border-gray-200/60 flex items-center justify-between text-xs text-gray-500 mb-3">
+                                    <span class="truncate"><i class="fa-solid fa-location-dot text-amber-500 mr-1"></i> ${item.location}</span>
+                                </div>
+                                <button onclick="openAgendaModal(${item.id})" class="w-full py-2 border border-brand-gold text-brand-gold hover:bg-brand-gold hover:text-brand-dark font-semibold text-xs rounded-xl transition-all">
+                                    <i class="fa-solid fa-circle-info mr-1"></i> Rincian Agenda
+                                </button>
+                            </div>
+                        </div>
+                    `;
+                } else {
+                    // LIST VIEW
+                    cardHtml = `
+                        <div class="col-span-full bg-brand-card rounded-2xl border border-gray-200/60 p-4 shadow-sm hover:shadow-md transition-all flex flex-col md:flex-row items-center justify-between gap-4">
+                            <div class="flex items-center gap-4 w-full md:w-auto">
+                                <div class="w-14 h-14 bg-brand-dark text-brand-gold rounded-xl flex flex-col items-center justify-center font-bold text-center leading-tight shadow-sm shrink-0">
+                                    <span class="text-base font-extrabold">${item.day}</span>
+                                    <span class="text-[10px] uppercase tracking-wider text-gray-300">${item.month}</span>
+                                </div>
+                                <div>
+                                    <div class="flex items-center gap-2 mb-1">
+                                        <span class="px-2 py-0.5 ${item.statusClass} font-bold text-[10px] rounded-md">${item.statusLabel}</span>
+                                        <span class="text-xs text-gray-500"><i class="fa-regular fa-clock text-amber-500 mr-1"></i>${item.time}</span>
+                                    </div>
+                                    <h3 class="font-bold text-gray-900 text-sm sm:text-base">${item.title}</h3>
+                                    <p class="text-xs text-gray-500 line-clamp-1"><i class="fa-solid fa-location-dot text-amber-500 mr-1"></i>${item.location}</p>
+                                </div>
+                            </div>
+                            <div class="w-full md:w-auto shrink-0">
+                                <button onclick="openAgendaModal(${item.id})" class="w-full md:w-auto px-5 py-2.5 border border-brand-gold text-brand-gold hover:bg-brand-gold hover:text-brand-dark font-semibold text-xs rounded-xl transition-all">
+                                    <i class="fa-solid fa-circle-info mr-1"></i> Detail
+                                </button>
+                            </div>
+                        </div>
+                    `;
+                }
+
+                container.innerHTML += cardHtml;
+            });
+
+            updateAgendaMetrics();
+        }
+
+        // OPEN & CLOSE MODAL
+        function openAgendaModal(id) {
+            const item = agendaData.find(a => a.id === id);
+            if (!item) return;
+
+            document.getElementById('modal-title').innerText = item.title;
+            document.getElementById('modal-status-badge').innerText = item.statusLabel;
+            document.getElementById('modal-date').innerText = item.date;
+            document.getElementById('modal-time').innerText = item.time;
+            document.getElementById('modal-location').innerText = item.location;
+            document.getElementById('modal-organizer').innerText = "Penanggung Jawab: " + item.organizer;
+            document.getElementById('modal-desc').innerText = item.desc;
+            document.getElementById('modal-requirements').innerText = item.requirements;
+            document.getElementById('modal-register-btn').href = item.linkRegister;
+
+            const rundownEl = document.getElementById('modal-rundown');
+            rundownEl.innerHTML = '';
+            item.rundown.forEach(step => {
+                rundownEl.innerHTML += `<li>${step}</li>`;
+            });
+
+            document.getElementById('agenda-modal').classList.remove('hidden');
+        }
+
+        function closeAgendaModal() {
+            document.getElementById('agenda-modal').classList.add('hidden');
+        }
+
+        // FILTER STATUS
+        function filterAgenda(status, btn) {
+            currentStatusFilter = status;
+            document.querySelectorAll('.btn-agenda-filter').forEach(b => {
+                b.className = 'btn-agenda-filter px-4 py-2 bg-white text-gray-700 hover:bg-brand-dark hover:text-brand-gold rounded-xl text-xs font-semibold shadow-sm transition-all border border-gray-200';
+            });
+            btn.className = 'btn-agenda-filter px-4 py-2 bg-brand-dark text-brand-gold rounded-xl text-xs font-semibold shadow-sm transition-all border border-brand-dark';
+
+            applyAgendaFilters();
+        }
+
+        // SEARCH FUNCTION
+        function searchAgenda() {
+            applyAgendaFilters();
+        }
+
+        function applyAgendaFilters() {
+            const keyword = document.getElementById('agenda-search').value.toLowerCase();
+            const filtered = agendaData.filter(a => {
+                const matchStatus = currentStatusFilter === 'all' || a.status === currentStatusFilter;
+                const matchKeyword = a.title.toLowerCase().includes(keyword) || a.location.toLowerCase().includes(keyword);
+                return matchStatus && matchKeyword;
+            });
+            renderAgenda(filtered);
+        }
+
+        // VIEW MODE TOGGLE (Grid vs List)
+        function setViewMode(mode) {
+            currentViewMode = mode;
+            const gridBtn = document.getElementById('view-grid-btn');
+            const listBtn = document.getElementById('view-list-btn');
+
+            if (mode === 'grid') {
+                gridBtn.className = 'px-3 py-1 bg-brand-dark text-brand-gold rounded-lg text-xs font-bold transition-all';
+                listBtn.className = 'px-3 py-1 text-gray-500 hover:text-gray-900 rounded-lg text-xs font-bold transition-all';
+            } else {
+                listBtn.className = 'px-3 py-1 bg-brand-dark text-brand-gold rounded-lg text-xs font-bold transition-all';
+                gridBtn.className = 'px-3 py-1 text-gray-500 hover:text-gray-900 rounded-lg text-xs font-bold transition-all';
+            }
+
+            applyAgendaFilters();
+        }
+
+        // METRICS UPDATE
+        function updateAgendaMetrics() {
+            document.getElementById('stat-total-agenda').innerText = `${agendaData.length}`;
+            document.getElementById('stat-upcoming').innerText = `${agendaData.filter(a => a.status === 'upcoming').length}`;
+            document.getElementById('stat-ongoing').innerText = `${agendaData.filter(a => a.status === 'ongoing').length}`;
+            document.getElementById('stat-completed').innerText = `${agendaData.filter(a => a.status === 'completed').length}`;
+        }
+
+        // MOBILE MENU TOGGLE
+        document.getElementById('mobile-menu-btn').addEventListener('click', () => {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        // INIT
+        document.addEventListener('DOMContentLoaded', () => {
+            renderAgenda(agendaData);
+        });
+    </script>
+</body>
+
+</html>

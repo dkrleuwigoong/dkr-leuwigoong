@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="id" class="h-full">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Program Kerja & Dokumen - DKR Leuwigoong</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap"
+        rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            gold: '#E09F27',
+                            'gold-hover': '#C6871A',
+                            dark: '#16120B',
+                            'dark-card': '#1E1810',
+                            card: '#FAF7F2',
+                            footer: '#110D07',
+                            bg: '#F5F2EB'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-brand-bg text-gray-800 font-sans flex flex-col min-h-full antialiased">
+
+    <nav class="sticky top-0 z-40 bg-brand-dark/95 backdrop-blur-md border-b border-white/5 py-3">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+            <a href="beranda.html" class="flex items-center gap-3">
+                <img src="assets/img/dkr-logo.png" alt="Logo DKR Leuwigoong"
+                    class="w-10 h-10 object-contain drop-shadow-md"
+                    onerror="this.onerror=null; this.src='https://via.placeholder.com/40?text=DKR';">
+                <div>
+                    <span
+                        class="block text-[10px] font-semibold text-amber-500 uppercase tracking-widest leading-none">Dewan
+                        Kerja Ranting</span>
+                    <span
+                        class="block text-lg font-extrabold text-white tracking-tight leading-tight mt-0.5">LEUWIGOONG</span>
+                </div>
+            </a>
+
+            <div class="hidden md:flex items-center space-x-6 text-xs uppercase font-semibold text-gray-300">
+                <a href="beranda.html" class="hover:text-brand-gold transition-colors">Beranda</a>
+                <a href="tentang.html" class="hover:text-brand-gold transition-colors">Tentang</a>
+                <a href="program.html" class="text-brand-gold transition-colors">Program</a>
+                <a href="agenda.html" class="hover:text-brand-gold transition-colors">Agenda</a>
+                <a href="berita.html" class="hover:text-brand-gold transition-colors">Berita</a>
+                <a href="galeri.html" class="hover:text-brand-gold transition-colors">Galeri</a>
+                <a href="kontak.html" class="hover:text-brand-gold transition-colors">Kontak</a>
+            </div>
+
+            <div class="hidden md:block">
+                <a href="gabung.html"
+                    class="px-5 py-2.5 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-brand-dark font-bold text-xs rounded-xl shadow-md transition-all border border-amber-400">
+                    Gabung Bersama Kami
+                </a>
+            </div>
+
+            <button id="mobile-menu-btn" class="md:hidden text-gray-300 hover:text-white text-xl focus:outline-none">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <div id="mobile-menu"
+            class="hidden md:hidden px-4 pt-3 pb-4 space-y-2 border-t border-white/10 mt-2 text-xs font-semibold uppercase text-gray-300">
+            <a href="beranda.html" class="block py-2 hover:text-brand-gold">Beranda</a>
+            <a href="tentang.html" class="block py-2 hover:text-brand-gold">Tentang</a>
+            <a href="program.html" class="block py-2 text-brand-gold">Program</a>
+            <a href="agenda.html" class="block py-2 hover:text-brand-gold">Agenda</a>
+            <a href="berita.html" class="block py-2 hover:text-brand-gold">Berita</a>
+            <a href="galeri.html" class="block py-2 hover:text-brand-gold">Galeri</a>
+            <a href="kontak.html" class="block py-2 hover:text-brand-gold">Kontak</a>
+            <a href="gabung.html"
+                class="block text-center mt-3 py-2.5 bg-brand-gold text-brand-dark font-bold rounded-xl">Gabung Bersama
+                Kami</a>
+        </div>
+    </nav>
+
+    <header
+        class="relative bg-gradient-to-b from-brand-dark/90 to-brand-dark/95 text-white py-16 px-4 sm:px-6 lg:px-8 text-center bg-cover bg-center"
+        style="background-image: linear-gradient(180deg, rgba(22, 18, 11, 0.88) 0%, rgba(22, 18, 11, 0.96) 100%), url('https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=1600&auto=format&fit=crop');">
+        <div class="max-w-3xl mx-auto">
+            <span
+                class="inline-block px-3 py-1 bg-amber-500/20 text-amber-400 uppercase tracking-widest font-bold text-[11px] rounded-md mb-3">
+                Kinerja & Regulasi
+            </span>
+            <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-3 tracking-tight">Program Kerja & Unduhan
+                Berkas</h1>
+            <p class="text-gray-300 text-sm sm:text-base max-w-xl mx-auto">
+                Rangkaian agenda strategis serta pusat pengunduhan berkas panduan, jukran, juknis, dan edaran resmi DKR
+                Leuwigoong.
+            </p>
+        </div>
+    </header>
+
+    <main class="flex-grow py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
+
+            <section>
+                <div class="mb-8">
+                    <span class="text-amber-600 font-bold text-xs uppercase tracking-wider block mb-1">Rencana Kegiatan
+                        Masa Bakti</span>
+                    <h2 class="text-2xl sm:text-3xl font-extrabold text-gray-900">Program Kerja Utama</h2>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div
+                        class="bg-white rounded-3xl border border-gray-200/80 p-6 shadow-sm hover:shadow-md transition-all">
+                        <div
+                            class="w-12 h-12 rounded-2xl bg-amber-500/10 text-amber-600 flex items-center justify-center text-xl font-bold mb-4">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                        </div>
+                        <span class="text-[10px] font-extrabold text-amber-600 uppercase tracking-wider">Bidang Kajian
+                            Kepramukaan</span>
+                        <h3 class="text-lg font-bold text-gray-900 mt-1 mb-2">Gladi Tanggon Penegak</h3>
+                        <p class="text-xs text-gray-600 leading-relaxed">
+                            Pelatihan wawasan kebangsaan, kepemimpinan, serta peningkatan kapasitas teknis Pramuka
+                            Penegak se-Ranting Leuwigoong.
+                        </p>
+                    </div>
+
+                    <div
+                        class="bg-white rounded-3xl border border-gray-200/80 p-6 shadow-sm hover:shadow-md transition-all">
+                        <div
+                            class="w-12 h-12 rounded-2xl bg-amber-500/10 text-amber-600 flex items-center justify-center text-xl font-bold mb-4">
+                            <i class="fa-solid fa-hand-holding-heart"></i>
+                        </div>
+                        <span class="text-[10px] font-extrabold text-amber-600 uppercase tracking-wider">Bidang
+                            Abdimas</span>
+                        <h3 class="text-lg font-bold text-gray-900 mt-1 mb-2">Pramuka Peduli Lingkungan</h3>
+                        <p class="text-xs text-gray-600 leading-relaxed">
+                            Aksi bakti sosial, penanaman pohon, dan tanggap bencana berkolaborasi dengan instansi lokal
+                            di Kecamatan Leuwigoong.
+                        </p>
+                    </div>
+
+                    <div
+                        class="bg-white rounded-3xl border border-gray-200/80 p-6 shadow-sm hover:shadow-md transition-all">
+                        <div
+                            class="w-12 h-12 rounded-2xl bg-amber-500/10 text-amber-600 flex items-center justify-center text-xl font-bold mb-4">
+                            <i class="fa-solid fa-bullhorn"></i>
+                        </div>
+                        <span class="text-[10px] font-extrabold text-amber-600 uppercase tracking-wider">Bidang Humas &
+                            Media</span>
+                        <h3 class="text-lg font-bold text-gray-900 mt-1 mb-2">Pelatihan Jurnalistik Pramuka</h3>
+                        <p class="text-xs text-gray-600 leading-relaxed">
+                            Workshop pengelolaan media sosial, fotografi, serta penulisan berita kegiatan pangkalan
+                            untuk anggota Ambalan.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="bg-white rounded-3xl border border-gray-200/80 p-6 sm:p-10 shadow-sm">
+                <div
+                    class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8 pb-6 border-b border-gray-100">
+                    <div>
+                        <span class="text-amber-600 font-bold text-xs uppercase tracking-wider block mb-1">Dokumen &
+                            Transparansi</span>
+                        <h2 class="text-2xl font-extrabold text-gray-900">Pusat Unduhan Berkas Resmi</h2>
+                        <p class="text-xs text-gray-500 mt-1">Unduh dokumen regulasi, petunjuk teknis kegiatan, serta
+                            edaran terbaru di bawah ini.</p>
+                    </div>
+                    <div class="flex flex-wrap gap-2 text-xs font-bold">
+                        <button onclick="filterDocs('all')"
+                            class="doc-filter-btn active px-3.5 py-2 rounded-xl bg-brand-dark text-white border border-brand-dark transition-all">Semua</button>
+                        <button onclick="filterDocs('jukran')"
+                            class="doc-filter-btn px-3.5 py-2 rounded-xl bg-gray-100 text-gray-600 hover:bg-gray-200 transition-all">Jukran
+                            & Juknis</button>
+                        <button onclick="filterDocs('edaran')"
+                            class="doc-filter-btn px-3.5 py-2 rounded-xl bg-gray-100 text-gray-600 hover:bg-gray-200 transition-all">Surat
+                            Edaran</button>
+                        <button onclick="filterDocs('form')"
+                            class="doc-filter-btn px-3.5 py-2 rounded-xl bg-gray-100 text-gray-600 hover:bg-gray-200 transition-all">Formulir
+                            & Template</button>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4" id="docGrid">
+                    <div
+                        class="doc-item jukran p-4 bg-brand-bg rounded-2xl border border-gray-200/80 flex items-center justify-between gap-4 hover:border-amber-400 transition-all">
+                        <div class="flex items-center gap-3.5 min-w-0">
+                            <div
+                                class="w-11 h-11 rounded-xl bg-rose-500/10 text-rose-600 flex items-center justify-center font-bold text-lg shrink-0">
+                                <i class="fa-solid fa-file-pdf"></i>
+                            </div>
+                            <div class="min-w-0">
+                                <h4 class="text-xs font-bold text-gray-900 truncate">Jukran Dewan Kerja Pramuka Penegak
+                                    & Pandega</h4>
+                                <p class="text-[10px] text-gray-500 mt-0.5">PDF &bull; 2.4 MB &bull; SK Kwarnas No. 005
+                                    Tahun 2017</p>
+                            </div>
+                        </div>
+                        <a href="assets/pdf/jukran-ppdk.pdf" download
+                            class="px-3 py-2 bg-white hover:bg-amber-500 hover:text-brand-dark text-gray-700 text-xs font-bold rounded-xl border border-gray-200 transition-all shrink-0 flex items-center gap-1.5 shadow-sm">
+                            <i class="fa-solid fa-download"></i> <span class="hidden sm:inline">Unduh</span>
+                        </a>
+                    </div>
+
+                    <div
+                        class="doc-item jukran p-4 bg-brand-bg rounded-2xl border border-gray-200/80 flex items-center justify-between gap-4 hover:border-amber-400 transition-all">
+                        <div class="flex items-center gap-3.5 min-w-0">
+                            <div
+                                class="w-11 h-11 rounded-xl bg-rose-500/10 text-rose-600 flex items-center justify-center font-bold text-lg shrink-0">
+                                <i class="fa-solid fa-file-pdf"></i>
+                            </div>
+                            <div class="min-w-0">
+                                <h4 class="text-xs font-bold text-gray-900 truncate">Jukran Saka Bhayangkara</h4>
+                                <p class="text-[10px] text-gray-500 mt-0.5">PDF &bull; 1.8 MB &bull; Edisi Revisi
+                                    Terbaru</p>
+                            </div>
+                        </div>
+                        <a href="assets/pdf/jukran-saka-bhayangkara.pdf" download
+                            class="px-3 py-2 bg-white hover:bg-amber-500 hover:text-brand-dark text-gray-700 text-xs font-bold rounded-xl border border-gray-200 transition-all shrink-0 flex items-center gap-1.5 shadow-sm">
+                            <i class="fa-solid fa-download"></i> <span class="hidden sm:inline">Unduh</span>
+                        </a>
+                    </div>
+
+                    <div
+                        class="doc-item edaran p-4 bg-brand-bg rounded-2xl border border-gray-200/80 flex items-center justify-between gap-4 hover:border-amber-400 transition-all">
+                        <div class="flex items-center gap-3.5 min-w-0">
+                            <div
+                                class="w-11 h-11 rounded-xl bg-amber-500/10 text-amber-600 flex items-center justify-center font-bold text-lg shrink-0">
+                                <i class="fa-solid fa-file-lines"></i>
+                            </div>
+                            <div class="min-w-0">
+                                <h4 class="text-xs font-bold text-gray-900 truncate">Surat Edaran Open Recruitment DKR
+                                    2026</h4>
+                                <p class="text-[10px] text-gray-500 mt-0.5">PDF &bull; 450 KB &bull; No: 012/10.05.15-C
+                                </p>
+                            </div>
+                        </div>
+                        <a href="assets/docs/edaran-oprec-2026.pdf" download
+                            class="px-3 py-2 bg-white hover:bg-amber-500 hover:text-brand-dark text-gray-700 text-xs font-bold rounded-xl border border-gray-200 transition-all shrink-0 flex items-center gap-1.5 shadow-sm">
+                            <i class="fa-solid fa-download"></i> <span class="hidden sm:inline">Unduh</span>
+                        </a>
+                    </div>
+
+                    <div
+                        class="doc-item edaran p-4 bg-brand-bg rounded-2xl border border-gray-200/80 flex items-center justify-between gap-4 hover:border-amber-400 transition-all">
+                        <div class="flex items-center gap-3.5 min-w-0">
+                            <div
+                                class="w-11 h-11 rounded-xl bg-amber-500/10 text-amber-600 flex items-center justify-center font-bold text-lg shrink-0">
+                                <i class="fa-solid fa-file-lines"></i>
+                            </div>
+                            <div class="min-w-0">
+                                <h4 class="text-xs font-bold text-gray-900 truncate">Edaran Iuran & Registrasi Ambalan
+                                    Se-Leuwigoong</h4>
+                                <p class="text-[10px] text-gray-500 mt-0.5">PDF &bull; 320 KB &bull; No: 008/10.05.15-B
+                                </p>
+                            </div>
+                        </div>
+                        <a href="assets/docs/edaran-registrasi.pdf" download
+                            class="px-3 py-2 bg-white hover:bg-amber-500 hover:text-brand-dark text-gray-700 text-xs font-bold rounded-xl border border-gray-200 transition-all shrink-0 flex items-center gap-1.5 shadow-sm">
+                            <i class="fa-solid fa-download"></i> <span class="hidden sm:inline">Unduh</span>
+                        </a>
+                    </div>
+
+                    <div
+                        class="doc-item form p-4 bg-brand-bg rounded-2xl border border-gray-200/80 flex items-center justify-between gap-4 hover:border-amber-400 transition-all">
+                        <div class="flex items-center gap-3.5 min-w-0">
+                            <div
+                                class="w-11 h-11 rounded-xl bg-blue-500/10 text-blue-600 flex items-center justify-center font-bold text-lg shrink-0">
+                                <i class="fa-solid fa-file-word"></i>
+                            </div>
+                            <div class="min-w-0">
+                                <h4 class="text-xs font-bold text-gray-900 truncate">Template Surat Mandat / Izin
+                                    Pembina Gudep</h4>
+                                <p class="text-[10px] text-gray-500 mt-0.5">DOCX &bull; 180 KB &bull; Format Baku DKR
+                                </p>
+                            </div>
+                        </div>
+                        <a href="assets/docs/template-surat-mandat.docx" download
+                            class="px-3 py-2 bg-white hover:bg-amber-500 hover:text-brand-dark text-gray-700 text-xs font-bold rounded-xl border border-gray-200 transition-all shrink-0 flex items-center gap-1.5 shadow-sm">
+                            <i class="fa-solid fa-download"></i> <span class="hidden sm:inline">Unduh</span>
+                        </a>
+                    </div>
+
+                    <div
+                        class="doc-item form p-4 bg-brand-bg rounded-2xl border border-gray-200/80 flex items-center justify-between gap-4 hover:border-amber-400 transition-all">
+                        <div class="flex items-center gap-3.5 min-w-0">
+                            <div
+                                class="w-11 h-11 rounded-xl bg-emerald-500/10 text-emerald-600 flex items-center justify-center font-bold text-lg shrink-0">
+                                <i class="fa-solid fa-file-excel"></i>
+                            </div>
+                            <div class="min-w-0">
+                                <h4 class="text-xs font-bold text-gray-900 truncate">Formulir Laporan Data Anggota
+                                    Penegak (Potensi)</h4>
+                                <p class="text-[10px] text-gray-500 mt-0.5">XLSX &bull; 210 KB &bull; Pembaruan 2026</p>
+                            </div>
+                        </div>
+                        <a href="assets/docs/form-potensi-penegak.xlsx" download
+                            class="px-3 py-2 bg-white hover:bg-amber-500 hover:text-brand-dark text-gray-700 text-xs font-bold rounded-xl border border-gray-200 transition-all shrink-0 flex items-center gap-1.5 shadow-sm">
+                            <i class="fa-solid fa-download"></i> <span class="hidden sm:inline">Unduh</span>
+                        </a>
+                    </div>
+
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <footer class="bg-brand-footer text-gray-400 text-xs py-10 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 pb-8 border-b border-white/10">
+                <div>
+                    <div class="flex items-center gap-2 mb-3">
+                        <img src="assets/img/dkr-logo.png" alt="Logo DKR" class="w-7 h-7 object-contain"
+                            onerror="this.onerror=null; this.src='https://via.placeholder.com/30?text=DKR';">
+                        <span class="font-extrabold text-white text-sm">LEUWIGOONG</span>
+                    </div>
+                    <p class="text-gray-400 leading-relaxed">
+                        Wadah bagi Pramuka Penegak dan Pandega untuk berkarya, berinovasi, dan berdampak nyata bagi
+                        masyarakat.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold uppercase tracking-wider mb-3">Kontak Kami</h4>
+                    <ul class="space-y-2">
+                        <li><i class="fa-solid fa-location-dot text-amber-500 mr-2"></i>Jl. Raya Leuwigoong No. 123,
+                            Garut 44192</li>
+                        <li><i class="fa-solid fa-phone text-amber-500 mr-2"></i>+62 812-3456-7890</li>
+                        <li><i class="fa-solid fa-envelope text-amber-500 mr-2"></i>dkrleuwigoong@gmail.com</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold uppercase tracking-wider mb-3">Media Sosial</h4>
+                    <div class="flex gap-2">
+                        <a href="#"
+                            class="w-8 h-8 rounded-lg bg-white/5 flex items-center justify-center text-gray-300 hover:bg-brand-gold hover:text-brand-dark transition-all"><i
+                                class="fa-brands fa-instagram"></i></a>
+                        <a href="#"
+                            class="w-8 h-8 rounded-lg bg-white/5 flex items-center justify-center text-gray-300 hover:bg-brand-gold hover:text-brand-dark transition-all"><i
+                                class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"
+                            class="w-8 h-8 rounded-lg bg-white/5 flex items-center justify-center text-gray-300 hover:bg-brand-gold hover:text-brand-dark transition-all"><i
+                                class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="pt-6 text-center text-gray-500 text-[11px]">
+                &copy; 2026 Dewan Kerja Ranting Leuwigoong. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function filterDocs(category) {
+            const items = document.querySelectorAll('.doc-item');
+            const btns = document.querySelectorAll('.doc-filter-btn');
+
+            // Style Tombol Active
+            btns.forEach(btn => {
+                btn.classList.remove('bg-brand-dark', 'text-white');
+                btn.classList.add('bg-gray-100', 'text-gray-600');
+            });
+            event.currentTarget.classList.remove('bg-gray-100', 'text-gray-600');
+            event.currentTarget.classList.add('bg-brand-dark', 'text-white');
+
+            // Filter Item
+            items.forEach(item => {
+                if (category === 'all' || item.classList.contains(category)) {
+                    item.style.display = 'flex';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+
+        document.getElementById('mobile-menu-btn').addEventListener('click', () => {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
+</body>
+
+</html>

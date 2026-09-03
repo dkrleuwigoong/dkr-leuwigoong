@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="id" class="h-full">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeri Dokumentasi - Dewan Kerja Ranting Leuwigoong</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap"
+        rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            gold: '#E09F27',
+                            'gold-hover': '#C6871A',
+                            dark: '#16120B',
+                            'dark-card': '#1E1810',
+                            card: '#FAF7F2',
+                            footer: '#110D07',
+                            bg: '#F5F2EB'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-brand-bg text-gray-800 font-sans flex flex-col min-h-full antialiased">
+
+    <nav class="sticky top-0 z-40 bg-brand-dark/95 backdrop-blur-md border-b border-white/5 py-3">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+            <a href="beranda.html" class="flex items-center gap-3">
+                <img src="assets/img/dkr-logo.png" alt="Logo DKR Leuwigoong"
+                    class="w-10 h-10 object-contain drop-shadow-md"
+                    onerror="this.onerror=null; this.src='https://via.placeholder.com/40?text=DKR';">
+                <div>
+                    <span
+                        class="block text-[10px] font-semibold text-amber-500 uppercase tracking-widest leading-none">Dewan
+                        Kerja Ranting</span>
+                    <span
+                        class="block text-lg font-extrabold text-white tracking-tight leading-tight mt-0.5">LEUWIGOONG</span>
+                </div>
+            </a>
+
+            <div class="hidden md:flex items-center space-x-6 text-xs uppercase font-semibold text-gray-300">
+                <a href="beranda.html" class="hover:text-brand-gold transition-colors">Beranda</a>
+                <a href="tentang.html" class="hover:text-brand-gold transition-colors">Tentang</a>
+                <a href="program.html" class="hover:text-brand-gold transition-colors">Program</a>
+                <a href="agenda.html" class="hover:text-brand-gold transition-colors">Agenda</a>
+                <a href="berita.html" class="hover:text-brand-gold transition-colors">Berita</a>
+                <a href="galeri.html" class="text-brand-gold relative py-1 border-b-2 border-brand-gold">Galeri</a>
+                <a href="kontak.html" class="hover:text-brand-gold transition-colors">Kontak</a>
+            </div>
+
+            <div class="hidden md:block">
+                <a href="#"
+                    class="px-5 py-2.5 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-brand-dark hover:text-white font-bold text-xs rounded-xl shadow-md transition-all hover:-translate-y-0.5">
+                    Gabung Bersama Kami
+                </a>
+            </div>
+
+            <button id="mobile-menu-btn" class="md:hidden text-gray-300 hover:text-white text-xl focus:outline-none">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <div id="mobile-menu"
+            class="hidden md:hidden px-4 pt-3 pb-4 space-y-2 border-t border-white/10 mt-2 text-xs font-semibold uppercase text-gray-300">
+            <a href="beranda.html" class="block py-2 hover:text-brand-gold">Beranda</a>
+            <a href="tentang.html" class="block py-2 hover:text-brand-gold">Tentang</a>
+            <a href="program.html" class="block py-2 hover:text-brand-gold">Program</a>
+            <a href="agenda.html" class="block py-2 hover:text-brand-gold">Agenda</a>
+            <a href="berita.html" class="block py-2 hover:text-brand-gold">Berita</a>
+            <a href="galeri.html" class="block py-2 text-brand-gold">Galeri</a>
+            <a href="#" class="block py-2 hover:text-brand-gold">Kontak</a>
+            <a href="#" class="block text-center mt-3 py-2.5 bg-brand-gold text-brand-dark font-bold rounded-xl">Gabung
+                Bersama Kami</a>
+        </div>
+    </nav>
+
+    <header
+        class="relative bg-gradient-to-b from-brand-dark/90 to-brand-dark/95 text-white py-16 px-4 sm:px-6 lg:px-8 text-center bg-cover bg-center"
+        style="background-image: linear-gradient(180deg, rgba(22, 18, 11, 0.88) 0%, rgba(22, 18, 11, 0.96) 100%), url('assets/img/foto-dkr-2.jpeg');">
+        <div class="max-w-3xl mx-auto">
+            <span
+                class="inline-block px-3 py-1 bg-amber-500/20 text-amber-400 uppercase tracking-widest font-bold text-[11px] rounded-md mb-3">
+                Dokumentasi & Memori Kegiatan
+            </span>
+            <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-3 tracking-tight">Galeri Penegak & Pandega
+            </h1>
+            <p class="text-gray-300 text-sm sm:text-base max-w-xl mx-auto">
+                Merekam setiap momen kebersamaan, aksi bakti, pelatihan, dan prestasi Pramuka Leuwigoong.
+            </p>
+        </div>
+    </header>
+
+    <main class="flex-grow py-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <div class="flex flex-col md:flex-row gap-4 items-center justify-between mb-8">
+                <div class="flex flex-wrap gap-2 justify-center md:justify-start w-full md:w-auto">
+                    <button onclick="filterGallery('all', this)"
+                        class="btn-gallery-filter px-4 py-2 bg-brand-dark text-brand-gold rounded-xl text-xs font-semibold shadow-sm transition-all border border-brand-dark">Semua
+                        Momen</button>
+                    <button onclick="filterGallery('perkemahan', this)"
+                        class="btn-gallery-filter px-4 py-2 bg-white text-gray-700 hover:bg-brand-dark hover:text-brand-gold rounded-xl text-xs font-semibold shadow-sm transition-all border border-gray-200">Perkemahan</button>
+                    <button onclick="filterGallery('bakti', this)"
+                        class="btn-gallery-filter px-4 py-2 bg-white text-gray-700 hover:bg-brand-dark hover:text-brand-gold rounded-xl text-xs font-semibold shadow-sm transition-all border border-gray-200">Bakti
+                        Sosial</button>
+                    <button onclick="filterGallery('pelatihan', this)"
+                        class="btn-gallery-filter px-4 py-2 bg-white text-gray-700 hover:bg-brand-dark hover:text-brand-gold rounded-xl text-xs font-semibold shadow-sm transition-all border border-gray-200">Pelatihan</button>
+                    <button onclick="filterGallery('perlombaan', this)"
+                        class="btn-gallery-filter px-4 py-2 bg-white text-gray-700 hover:bg-brand-dark hover:text-brand-gold rounded-xl text-xs font-semibold shadow-sm transition-all border border-gray-200">Perlombaan</button>
+                </div>
+
+                <div class="relative w-full md:w-64">
+                    <i
+                        class="fa-solid fa-magnifying-glass absolute left-3.5 top-1/2 -translate-y-1/2 text-gray-400 text-xs"></i>
+                    <input type="text" id="gallery-search" onkeyup="searchGallery()" placeholder="Cari foto kegiatan..."
+                        class="w-full pl-9 pr-4 py-2 bg-white border border-gray-200 rounded-xl text-xs focus:outline-none focus:border-brand-gold focus:ring-1 focus:ring-brand-gold">
+                </div>
+            </div>
+
+            <div id="gallery-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+            </div>
+
+        </div>
+    </main>
+
+    <div id="lightbox-modal"
+        class="fixed inset-0 z-50 hidden bg-black/80 backdrop-blur-md flex items-center justify-center p-4">
+        <div
+            class="max-w-4xl w-full bg-brand-dark border border-white/10 rounded-2xl overflow-hidden shadow-2xl relative flex flex-col md:flex-row">
+            <button onclick="closeLightbox()"
+                class="absolute top-3 right-3 z-10 w-8 h-8 rounded-full bg-black/50 text-white hover:bg-brand-gold hover:text-brand-dark flex items-center justify-center transition-all">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <div class="md:w-2/3 bg-black flex items-center justify-center min-h-[280px]">
+                <img id="lightbox-img" src="" alt="Detail Foto" class="max-h-[75vh] w-full object-contain">
+            </div>
+
+            <div class="md:w-1/3 p-6 text-white flex flex-col justify-between bg-brand-dark-card">
+                <div>
+                    <span id="lightbox-category"
+                        class="px-2.5 py-1 bg-brand-gold/20 text-brand-gold font-bold text-[10px] rounded-md uppercase tracking-wider inline-block mb-3">Kategori</span>
+                    <h3 id="lightbox-title" class="text-lg font-bold mb-2 leading-snug">Judul Momen Foto</h3>
+                    <div class="text-xs text-gray-400 space-y-1 mb-4">
+                        <p><i class="fa-regular fa-calendar text-brand-gold mr-1.5"></i><span id="lightbox-date">01 Jan
+                                2026</span></p>
+                        <p><i class="fa-solid fa-location-dot text-brand-gold mr-1.5"></i><span
+                                id="lightbox-location">Lokasi</span></p>
+                    </div>
+                    <p id="lightbox-desc" class="text-xs text-gray-300 leading-relaxed">Deskripsi singkat dokumentasi.
+                    </p>
+                </div>
+
+                <div class="pt-4 border-t border-white/10 mt-6 flex justify-between items-center text-xs text-gray-400">
+                    <span>Dokumentasi DKR Leuwigoong</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-brand-footer text-gray-400 text-xs py-10 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 pb-8 border-b border-white/10">
+                <div>
+                    <div class="flex items-center gap-2 mb-3">
+                        <img src="assets/img/dkr-logo.png" alt="Logo DKR" class="w-7 h-7 object-contain"
+                            onerror="this.onerror=null; this.src='https://via.placeholder.com/30?text=DKR';">
+                        <span class="font-extrabold text-white text-sm">LEUWIGOONG</span>
+                    </div>
+                    <p class="text-gray-400 leading-relaxed">
+                        Wadah bagi Pramuka Penegak dan Pandega untuk berkarya, berinovasi, dan berdampak nyata bagi
+                        masyarakat.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold uppercase tracking-wider mb-3">Kontak Kami</h4>
+                    <ul class="space-y-2">
+                        <li><i class="fa-solid fa-location-dot text-amber-500 mr-2"></i>Jl. Raya Leuwigoong No. 123,
+                            Garut 44192</li>
+                        <li><i class="fa-solid fa-phone text-amber-500 mr-2"></i>+62 812-3456-7890</li>
+                        <li><i class="fa-solid fa-envelope text-amber-500 mr-2"></i>dkrleuwigoong@gmail.com</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold uppercase tracking-wider mb-3">Media Sosial</h4>
+                    <div class="flex gap-2">
+                        <a href="#"
+                            class="w-8 h-8 rounded-lg bg-white/5 flex items-center justify-center text-gray-300 hover:bg-brand-gold hover:text-brand-dark transition-all"><i
+                                class="fa-brands fa-instagram"></i></a>
+                        <a href="#"
+                            class="w-8 h-8 rounded-lg bg-white/5 flex items-center justify-center text-gray-300 hover:bg-brand-gold hover:text-brand-dark transition-all"><i
+                                class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"
+                            class="w-8 h-8 rounded-lg bg-white/5 flex items-center justify-center text-gray-300 hover:bg-brand-gold hover:text-brand-dark transition-all"><i
+                                class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="pt-6 text-center text-gray-500 text-[11px]">
+                &copy; 2026 Dewan Kerja Ranting Leuwigoong. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const galleryData = [
+            {
+                id: 1,
+                title: "Upacara Pembukaan Latihan Gabungan",
+                category: "pelatihan",
+                categoryLabel: "Pelatihan",
+                date: "28 Agustus 2026",
+                location: "Lapangan SMAN 1 Leuwigoong",
+                image: "https://images.unsplash.com/photo-1506784983877-45594efa4cbe?q=80&w=800&auto=format&fit=crop",
+                desc: "Suasana apel pembukaan latihan gabungan penegak seri navigasi darat yang diikuti oleh perwakilan seluruh pangkalan ambalan."
+            },
+            {
+                id: 2,
+                title: "Aksi Bersih Bantaran Sungai",
+                category: "bakti",
+                categoryLabel: "Bakti Sosial",
+                date: "15 Agustus 2026",
+                location: "Sungai Leuwigoong",
+                image: "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?q=80&w=800&auto=format&fit=crop",
+                desc: "Anggota Pramuka Peduli DKR Leuwigoong bergotong-royong membersihkan sampah plastik di sekitar bantaran sungai."
+            },
+            {
+                id: 3,
+                title: "Giat Lomba Pionering Kreatif",
+                category: "perlombaan",
+                categoryLabel: "Perlombaan",
+                date: "02 September 2026",
+                location: "Buper Cilopang",
+                image: "https://images.unsplash.com/photo-1526976668912-1a811878dd37?q=80&w=800&auto=format&fit=crop",
+                desc: "Kontingen DKR Leuwigoong saat mendirikan bangunan pionering menara pandang dalam Kemah Bakti Cabang."
+            },
+            {
+                id: 4,
+                title: "Malam Api Unggun Raimuna",
+                category: "perkemahan",
+                categoryLabel: "Perkemahan",
+                date: "21 November 2025",
+                location: "Pasir Kunci",
+                image: "https://images.unsplash.com/photo-1478131143081-80f7f84ca84d?q=80&w=800&auto=format&fit=crop",
+                desc: "Kehangatan malam keakraban dan pentas seni budaya mengitari kobaran api unggun Raimuna Ranting."
+            },
+            {
+                id: 5,
+                title: "Praktik Kompas & Navigasi Medan",
+                category: "pelatihan",
+                categoryLabel: "Pelatihan",
+                date: "28 Agustus 2026",
+                location: "Perbukitan Leuwigoong",
+                image: "https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?q=80&w=800&auto=format&fit=crop",
+                desc: "Peserta penjelajahan berlatih membidik titik koordinat menggunakan kompas prisma di medan terbuka."
+            },
+            {
+                id: 6,
+                title: "Penanaman Bibit Pohon Mahoni",
+                category: "bakti",
+                categoryLabel: "Bakti Sosial",
+                date: "05 Agustus 2026",
+                location: "Desa Leuwigoong",
+                image: "https://images.unsplash.com/photo-1464226184884-fa280b87c399?q=80&w=800&auto=format&fit=crop",
+                desc: "Aksi penghijauan lingkungan bersama masyarakat lokal sebagai pengamalan Dasadarma Pramuka."
+            }
+        ];
+
+        let currentFilter = 'all';
+
+        function renderGallery(data) {
+            const container = document.getElementById('gallery-container');
+            container.innerHTML = '';
+
+            if (data.length === 0) {
+                container.innerHTML = `<div class="col-span-full text-center text-gray-400 py-12"><i class="fa-regular fa-images text-4xl mb-3 block"></i>Dokumentasi tidak ditemukan.</div>`;
+                return;
+            }
+
+            data.forEach(item => {
+                const card = `
+                    <div onclick="openLightbox(${item.id})" class="group cursor-pointer bg-brand-card rounded-2xl border border-gray-200/60 overflow-hidden shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all">
+                        <div class="relative h-52 overflow-hidden bg-gray-200">
+                            <img src="${item.image}" alt="${item.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-brand-dark/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                                <span class="w-10 h-10 rounded-full bg-brand-gold text-brand-dark flex items-center justify-center text-sm font-bold shadow-md">
+                                    <i class="fa-solid fa-magnifying-glass-plus"></i>
+                                </span>
+                            </div>
+                            <span class="absolute top-3 left-3 px-2.5 py-1 bg-brand-dark/80 backdrop-blur-md text-brand-gold font-bold text-[10px] rounded-md uppercase tracking-wider">${item.categoryLabel}</span>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="font-bold text-gray-900 text-sm mb-1 group-hover:text-amber-600 transition-colors line-clamp-1">${item.title}</h3>
+                            <div class="flex items-center gap-3 text-[11px] text-gray-500">
+                                <span><i class="fa-regular fa-calendar text-amber-500 mr-1"></i>${item.date}</span>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                container.innerHTML += card;
+            });
+        }
+
+        function openLightbox(id) {
+            const item = galleryData.find(g => g.id === id);
+            if (!item) return;
+
+            document.getElementById('lightbox-img').src = item.image;
+            document.getElementById('lightbox-title').innerText = item.title;
+            document.getElementById('lightbox-category').innerText = item.categoryLabel;
+            document.getElementById('lightbox-date').innerText = item.date;
+            document.getElementById('lightbox-location').innerText = item.location;
+            document.getElementById('lightbox-desc').innerText = item.desc;
+
+            document.getElementById('lightbox-modal').classList.remove('hidden');
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox-modal').classList.add('hidden');
+        }
+
+        function filterGallery(cat, btn) {
+            currentFilter = cat;
+            document.querySelectorAll('.btn-gallery-filter').forEach(b => {
+                b.className = 'btn-gallery-filter px-4 py-2 bg-white text-gray-700 hover:bg-brand-dark hover:text-brand-gold rounded-xl text-xs font-semibold shadow-sm transition-all border border-gray-200';
+            });
+            btn.className = 'btn-gallery-filter px-4 py-2 bg-brand-dark text-brand-gold rounded-xl text-xs font-semibold shadow-sm transition-all border border-brand-dark';
+
+            applyGalleryFilters();
+        }
+
+        function searchGallery() {
+            applyGalleryFilters();
+        }
+
+        function applyGalleryFilters() {
+            const keyword = document.getElementById('gallery-search').value.toLowerCase();
+            const filtered = galleryData.filter(g => {
+                const matchCat = currentFilter === 'all' || g.category === currentFilter;
+                const matchKeyword = g.title.toLowerCase().includes(keyword) || g.location.toLowerCase().includes(keyword);
+                return matchCat && matchKeyword;
+            });
+            renderGallery(filtered);
+        }
+
+        document.getElementById('mobile-menu-btn').addEventListener('click', () => {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            renderGallery(galleryData);
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beranda - Dewan Kerja Ranting Leuwigoong</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap"
+        rel="stylesheet">
+
+    <link rel="icon" href="assets/img/dkr-logo.png" type="image/png">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            gold: '#E09F27',
+                            goldHover: '#C6871A',
+                            dark: '#16120B',
+                            darkCard: '#1E1810',
+                            cardBg: '#FAF7F2',
+                            footer: '#110D07'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        .hero-bg {
+            background: linear-gradient(180deg, rgba(22, 18, 11, 0.78) 0%, rgba(22, 18, 11, 0.95) 100%),
+                url('assets/img/foto-dkr-3.jpeg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.88);
+            backdrop-filter: blur(12px);
+        }
+    </style>
+</head>
+
+<body class="font-sans text-gray-800 bg-[#F5F2EB] antialiased selection:bg-brand-gold selection:text-white">
+
+    <!-- NAVBAR -->
+    <nav class="sticky top-0 z-40 bg-brand-dark/95 backdrop-blur-md border-b border-white/5 py-3">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+            <a href="beranda.html" class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl overflow-hidden flex items-center justify-center shadow-sm">
+                    <img src="assets/img/dkr-logo.png" alt="Logo DKR Leuwigoong" class="w-full h-full object-contain">
+                </div>
+                <div>
+                    <span
+                        class="block text-[10px] font-semibold text-amber-500 uppercase tracking-widest leading-none">Dewan
+                        Kerja Ranting</span>
+                    <span
+                        class="block text-lg font-extrabold text-white tracking-tight leading-tight mt-0.5">LEUWIGOONG</span>
+                </div>
+            </a>
+    
+            <div class="hidden md:flex items-center space-x-6 text-xs uppercase font-semibold text-gray-300">
+                <a href="beranda.html" class="text-brand-gold relative py-1 border-b-2 border-brand-gold">Beranda</a>
+                <a href="tentang.html" class="hover:text-brand-gold transition-colors">Tentang</a>
+                <a href="program.html" class="hover:text-brand-gold transition-colors">Program</a>
+                <a href="agenda.html" class="hover:text-brand-gold transition-colors">Agenda</a>
+                <a href="berita.html" class="hover:text-brand-gold transition-colors">Berita</a>
+                <a href="galeri.html" class="hover:text-brand-gold transition-colors">Galeri</a>
+                <a href="kontak.html" class="hover:text-brand-gold transition-colors">Kontak</a>
+            </div>
+    
+            <div class="hidden md:block">
+                <a href="gabung.html"
+                    class="px-5 py-2.5 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-brand-dark hover:text-white font-bold text-xs rounded-xl shadow-md transition-all hover:-translate-y-0.5">
+                    Gabung Bersama Kami
+                </a>
+            </div>
+    
+            <button id="mobile-menu-btn" class="md:hidden text-gray-300 hover:text-white text-xl focus:outline-none">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    
+        <div id="mobile-menu"
+            class="hidden md:hidden px-4 pt-3 pb-4 space-y-2 border-t border-white/10 mt-2 text-xs font-semibold uppercase text-gray-300">
+            <a href="beranda.html" class="block py-2 text-brand-gold">Beranda</a>
+            <a href="tentang.html" class="block py-2 hover:text-brand-gold">Tentang</a>
+            <a href="program.html" class="block py-2 hover:text-brand-gold">Program</a>
+            <a href="#" class="block py-2 hover:text-brand-gold">Agenda</a>
+            <a href="#" class="block py-2 hover:text-brand-gold">Berita</a>
+            <a href="#" class="block py-2 hover:text-brand-gold">Galeri</a>
+            <a href="#" class="block py-2 hover:text-brand-gold">Kontak</a>
+            <a href="#" class="block text-center mt-3 py-2.5 bg-brand-gold text-brand-dark font-bold rounded-xl">Gabung
+                Bersama Kami</a>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <header class="hero-bg text-white relative pt-24 pb-40 px-4 sm:px-6 lg:px-8 overflow-hidden">
+        <div class="max-w-7xl mx-auto">
+            <div class="max-w-3xl space-y-6">
+                <div
+                    class="inline-flex items-center gap-3 bg-white/10 backdrop-blur-md border border-white/15 px-3 py-1.5 rounded-full text-brand-gold text-xs font-semibold tracking-wider uppercase">
+                
+                    <div class="w-7 h-7 rounded-full flex items-center justify-center overflow-hidden">
+                        <img src="assets/img/logo-dkr.webp" alt="Logo DKR Leuwigoong" class="w-full h-full object-contain">
+                    </div>
+                
+                    Dewan Kerja Ranting Leuwigoong
+                </div>
+                <h1 class="text-4xl sm:text-6xl font-extrabold leading-[1.15] tracking-tight">
+                    Bergerak Bersama,<br>
+                    <span
+                        class="bg-gradient-to-r from-brand-gold via-amber-300 to-yellow-500 bg-clip-text text-transparent">Berkarya
+                        Nyata</span><br>
+                    untuk Leuwigoong
+                </h1>
+                <p class="text-gray-300 text-base sm:text-lg max-w-xl font-normal leading-relaxed">
+                    Mewujudkan Pramuka yang berkarakter, berprestasi, dan peduli terhadap lingkungan serta masyarakat.
+                </p>
+                <div class="flex flex-wrap gap-4 pt-2">
+                    <a href="#"
+                        class="bg-brand-gold hover:bg-brand-goldHover text-brand-dark font-bold px-6 py-3.5 rounded-xl flex items-center gap-2 text-xs shadow-lg shadow-brand-gold/20 transition duration-300 transform hover:-translate-y-0.5">
+                        Kenali Kami Lebih Dekat <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                    </a>
+                    <a href="#"
+                        class="bg-white/5 hover:bg-white/10 backdrop-blur-sm border border-white/20 text-white font-semibold px-6 py-3.5 rounded-xl flex items-center gap-2 text-xs transition">
+                        Lihat Program <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                    </a>
+                </div>
+                <div class="flex gap-4 text-xs text-amber-200/70 font-medium pt-4">
+                    <span>#DKRLeuwigoong</span>
+                    <span>#BergerakBerkaryaBerdampak</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- STATS OVERLAY SECTION -->
+    <section class="max-w-6xl mx-auto px-4 -mt-20 relative z-10">
+        <div
+            class="glass-card rounded-2xl shadow-2xl border border-white/60 p-6 md:p-8 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+            <div class="space-y-2 md:border-r border-gray-200/60 pr-2">
+                <div
+                    class="w-12 h-12 bg-amber-100/60 text-brand-gold rounded-xl flex items-center justify-center mx-auto text-xl shadow-sm">
+                    <i class="fa-solid fa-users"></i>
+                </div>
+                <h3 class="text-3xl font-extrabold text-gray-900 tracking-tight">2</h3>
+                <p class="text-xs text-gray-600 font-bold uppercase tracking-wider">Gugus Depan Aktif</p>
+            </div>
+            <div class="space-y-2 md:border-r border-gray-200/60 pr-2">
+                <div
+                    class="w-12 h-12 bg-amber-100/60 text-brand-gold rounded-xl flex items-center justify-center mx-auto text-xl shadow-sm">
+                    <i class="fa-solid fa-user-group"></i>
+                </div>
+                <h3 class="text-3xl font-extrabold text-gray-900 tracking-tight">320+</h3>
+                <p class="text-xs text-gray-600 font-bold uppercase tracking-wider">Anggota Aktif</p>
+            </div>
+            <div class="space-y-2 md:border-r border-gray-200/60 pr-2">
+                <div
+                    class="w-12 h-12 bg-amber-100/60 text-brand-gold rounded-xl flex items-center justify-center mx-auto text-xl shadow-sm">
+                    <i class="fa-regular fa-calendar-check"></i>
+                </div>
+                <h3 class="text-3xl font-extrabold text-gray-900 tracking-tight">25+</h3>
+                <p class="text-xs text-gray-600 font-bold uppercase tracking-wider">Program Kerja</p>
+            </div>
+            <div class="space-y-2">
+                <div
+                    class="w-12 h-12 bg-amber-100/60 text-brand-gold rounded-xl flex items-center justify-center mx-auto text-xl shadow-sm">
+                    <i class="fa-solid fa-trophy"></i>
+                </div>
+                <h3 class="text-3xl font-extrabold text-gray-900 tracking-tight">15+</h3>
+                <p class="text-xs text-gray-600 font-bold uppercase tracking-wider">Prestasi Diraih</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROGRAM UNGGULAN SECTION -->
+    <section class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+            <div>
+                <span class="text-xs font-bold uppercase tracking-widest text-brand-gold block mb-2">PROGRAM KAMI</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900 tracking-tight">Program Unggulan<br>DKR
+                    Leuwigoong</h2>
+            </div>
+            <p class="text-gray-600 text-sm max-w-md leading-relaxed font-normal">
+                Berbagai program kerja strategis yang dirancang untuk membentuk karakter generasi muda yang tangguh,
+                berdaya saing, dan mandiri.
+            </p>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Card 1 -->
+            <div
+                class="bg-white rounded-2xl overflow-hidden border border-amber-900/5 shadow-md hover:shadow-xl transition-all duration-300 group">
+                <div class="overflow-hidden h-48">
+                    <img src="https://images.unsplash.com/photo-1526976668912-1a811878dd37?q=80&w=500&auto=format&fit=crop"
+                        alt="Pembinaan Pramuka"
+                        class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                </div>
+                <div class="p-6">
+                    <h3 class="font-bold text-gray-900 text-lg mb-2 group-hover:text-brand-gold transition">Pembinaan
+                        Pramuka</h3>
+                    <p class="text-xs text-gray-600 leading-relaxed">Meningkatkan kualitas anggota melalui pembinaan
+                        rutin, bertahap, dan berkelanjutan.</p>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div
+                class="bg-white rounded-2xl overflow-hidden border border-amber-900/5 shadow-md hover:shadow-xl transition-all duration-300 group">
+                <div class="overflow-hidden h-48">
+                    <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?q=80&w=500&auto=format&fit=crop"
+                        alt="Aksi Peduli Lingkungan"
+                        class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                </div>
+                <div class="p-6">
+                    <h3 class="font-bold text-gray-900 text-lg mb-2 group-hover:text-brand-gold transition">Aksi Peduli
+                        Lingkungan</h3>
+                    <p class="text-xs text-gray-600 leading-relaxed">Kegiatan sosial-ekologi nyata untuk menjaga
+                        kebersihan dan kelestarian alam sekitar.</p>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div
+                class="bg-white rounded-2xl overflow-hidden border border-amber-900/5 shadow-md hover:shadow-xl transition-all duration-300 group">
+                <div class="overflow-hidden h-48">
+                    <img src="https://images.unsplash.com/photo-1478131143081-80f7f84ca84d?q=80&w=500&auto=format&fit=crop"
+                        alt="Perkemahan & Adventure"
+                        class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                </div>
+                <div class="p-6">
+                    <h3 class="font-bold text-gray-900 text-lg mb-2 group-hover:text-brand-gold transition">Perkemahan &
+                        Adventure</h3>
+                    <p class="text-xs text-gray-600 leading-relaxed">Melatih kemandirian, kerjasama tim, dan ketangkasan
+                        melalui petualangan alam terbuka.</p>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div
+                class="bg-white rounded-2xl overflow-hidden border border-amber-900/5 shadow-md hover:shadow-xl transition-all duration-300 group">
+                <div class="overflow-hidden h-48">
+                    <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?q=80&w=500&auto=format&fit=crop"
+                        alt="Pelatihan & Workshop"
+                        class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                </div>
+                <div class="p-6">
+                    <h3 class="font-bold text-gray-900 text-lg mb-2 group-hover:text-brand-gold transition">Pelatihan &
+                        Workshop</h3>
+                    <p class="text-xs text-gray-600 leading-relaxed">Mengasah *soft skills*, kepemimpinan, serta
+                        keahlian teknis era digital.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center mt-12">
+            <a href="#"
+                class="inline-flex items-center gap-2 bg-brand-dark text-white text-xs font-bold px-7 py-3.5 rounded-xl hover:bg-black shadow-lg transition">
+                Lihat Semua Program <i class="fa-solid fa-chevron-right text-[10px]"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- AGENDA & BERITA SECTION -->
+    <section class="py-16 bg-white border-y border-amber-900/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-12 gap-8">
+
+            <!-- Agenda Terdekat -->
+            <div class="lg:col-span-4 bg-brand-cardBg p-6 sm:p-8 rounded-3xl border border-amber-900/5">
+                <div class="flex items-center gap-3 mb-6">
+                    <div
+                        class="w-8 h-8 rounded-lg bg-brand-gold/15 text-brand-gold flex items-center justify-center text-sm">
+                        <i class="fa-regular fa-calendar-alt"></i>
+                    </div>
+                    <h2 class="font-extrabold text-gray-900 tracking-tight text-lg">AGENDA TERDEKAT</h2>
+                </div>
+
+                <div class="space-y-4">
+                    <div class="flex gap-4 items-center bg-white p-3.5 rounded-2xl shadow-sm border border-gray-100">
+                        <div class="bg-brand-dark text-white rounded-xl p-2.5 text-center min-w-[55px] flex-shrink-0">
+                            <span class="block text-xl font-extrabold leading-none">25</span>
+                            <span class="text-[9px] font-bold uppercase tracking-wider text-brand-gold">MEI</span>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-xs text-gray-900">Latihan Gabungan</h4>
+                            <p class="text-[11px] text-gray-500">Buper Leuwigoong</p>
+                            <span class="text-[10px] text-brand-gold font-semibold block mt-0.5"><i
+                                    class="fa-regular fa-clock"></i> 07.00 WIB</span>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-4 items-center bg-white p-3.5 rounded-2xl shadow-sm border border-gray-100">
+                        <div class="bg-brand-dark text-white rounded-xl p-2.5 text-center min-w-[55px] flex-shrink-0">
+                            <span class="block text-xl font-extrabold leading-none">08</span>
+                            <span class="text-[9px] font-bold uppercase tracking-wider text-brand-gold">JUN</span>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-xs text-gray-900">Aksi Bersih Lingkungan</h4>
+                            <p class="text-[11px] text-gray-500">Kec. Leuwigoong</p>
+                            <span class="text-[10px] text-brand-gold font-semibold block mt-0.5"><i
+                                    class="fa-regular fa-clock"></i> 07.00 WIB</span>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-4 items-center bg-white p-3.5 rounded-2xl shadow-sm border border-gray-100">
+                        <div class="bg-brand-dark text-white rounded-xl p-2.5 text-center min-w-[55px] flex-shrink-0">
+                            <span class="block text-xl font-extrabold leading-none">22</span>
+                            <span class="text-[9px] font-bold uppercase tracking-wider text-brand-gold">JUN</span>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-xs text-gray-900">Perkemahan Ranting</h4>
+                            <p class="text-[11px] text-gray-500">Buper Pasir Eurih</p>
+                            <span class="text-[10px] text-brand-gold font-semibold block mt-0.5"><i
+                                    class="fa-solid fa-hourglass-half"></i> 2 Hari</span>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="#"
+                    class="inline-flex items-center gap-1.5 text-xs font-bold text-brand-gold hover:text-brand-goldHover mt-6 transition">
+                    Lihat Semua Agenda <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                </a>
+            </div>
+
+            <!-- Berita Terkini -->
+            <div class="lg:col-span-8 bg-brand-cardBg p-6 sm:p-8 rounded-3xl border border-amber-900/5">
+                <div class="flex items-center justify-between mb-6">
+                    <div class="flex items-center gap-3">
+                        <div
+                            class="w-8 h-8 rounded-lg bg-brand-gold/15 text-brand-gold flex items-center justify-center text-sm">
+                            <i class="fa-regular fa-newspaper"></i>
+                        </div>
+                        <h2 class="font-extrabold text-gray-900 tracking-tight text-lg">BERITA TERKINI</h2>
+                    </div>
+                    <a href="#"
+                        class="text-xs font-bold text-brand-gold hover:text-brand-goldHover hidden sm:flex items-center gap-1.5 transition">
+                        Lihat Semua <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                    </a>
+                </div>
+
+                <div class="grid sm:grid-cols-3 gap-5">
+                    <!-- News Item 1 -->
+                    <div
+                        class="bg-white rounded-2xl overflow-hidden border border-gray-100 flex flex-col justify-between shadow-sm hover:shadow-md transition">
+                        <div class="relative">
+                            <img src="https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?q=80&w=400&auto=format&fit=crop"
+                                alt="News 1" class="w-full h-36 object-cover">
+                            <span
+                                class="absolute bottom-2 left-2 bg-brand-dark/90 text-white text-[9px] font-bold px-2 py-0.5 rounded-md backdrop-blur-sm">18
+                                MEI 2024</span>
+                        </div>
+                        <div class="p-4 flex-grow flex flex-col justify-between space-y-3">
+                            <div>
+                                <h3 class="font-bold text-xs text-gray-900 line-clamp-2 leading-snug">DKR Leuwigoong
+                                    Raih Juara Umum di LT IV Kwarran</h3>
+                                <p class="text-[11px] text-gray-500 mt-1.5 line-clamp-2">Prestasi membanggakan diraih
+                                    oleh kontingen DKR Leuwigoong dalam kegiatan LT IV.</p>
+                            </div>
+                            <a href="#"
+                                class="text-[11px] font-bold text-brand-gold hover:underline inline-flex items-center gap-1">
+                                Baca Selengkapnya <i class="fa-solid fa-arrow-right text-[9px]"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- News Item 2 -->
+                    <div
+                        class="bg-white rounded-2xl overflow-hidden border border-gray-100 flex flex-col justify-between shadow-sm hover:shadow-md transition">
+                        <div class="relative">
+                            <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?q=80&w=400&auto=format&fit=crop"
+                                alt="News 2" class="w-full h-36 object-cover">
+                            <span
+                                class="absolute bottom-2 left-2 bg-brand-dark/90 text-white text-[9px] font-bold px-2 py-0.5 rounded-md backdrop-blur-sm">10
+                                MEI 2024</span>
+                        </div>
+                        <div class="p-4 flex-grow flex flex-col justify-between space-y-3">
+                            <div>
+                                <h3 class="font-bold text-xs text-gray-900 line-clamp-2 leading-snug">Pelatihan
+                                    Leadership DKR Leuwigoong 2024</h3>
+                                <p class="text-[11px] text-gray-500 mt-1.5 line-clamp-2">Membangun jiwa kepemimpinan
+                                    yang berkarakter dan siap menjadi teladan.</p>
+                            </div>
+                            <a href="#"
+                                class="text-[11px] font-bold text-brand-gold hover:underline inline-flex items-center gap-1">
+                                Baca Selengkapnya <i class="fa-solid fa-arrow-right text-[9px]"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- News Item 3 -->
+                    <div
+                        class="bg-white rounded-2xl overflow-hidden border border-gray-100 flex flex-col justify-between shadow-sm hover:shadow-md transition">
+                        <div class="relative">
+                            <img src="https://images.unsplash.com/photo-1618477461853-cf6ed80faba5?q=80&w=400&auto=format&fit=crop"
+                                alt="News 3" class="w-full h-36 object-cover">
+                            <span
+                                class="absolute bottom-2 left-2 bg-brand-dark/90 text-white text-[9px] font-bold px-2 py-0.5 rounded-md backdrop-blur-sm">02
+                                MEI 2024</span>
+                        </div>
+                        <div class="p-4 flex-grow flex flex-col justify-between space-y-3">
+                            <div>
+                                <h3 class="font-bold text-xs text-gray-900 line-clamp-2 leading-snug">Aksi Peduli
+                                    Lingkungan di Sungai Cikaso</h3>
+                                <p class="text-[11px] text-gray-500 mt-1.5 line-clamp-2">Anggota DKR Leuwigoong bersama
+                                    warga membersihkan alur sungai Cikaso.</p>
+                            </div>
+                            <a href="#"
+                                class="text-[11px] font-bold text-brand-gold hover:underline inline-flex items-center gap-1">
+                                Baca Selengkapnya <i class="fa-solid fa-arrow-right text-[9px]"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CALL TO ACTION SECTION -->
+    <section class="py-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div
+            class="bg-gradient-to-r from-brand-dark via-brand-darkCard to-black rounded-3xl p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-6 shadow-2xl relative overflow-hidden">
+            <div class="flex items-center gap-6 text-white relative z-10">
+                <div
+                    class="w-16 h-16 bg-brand-gold/15 text-brand-gold border border-brand-gold/20 rounded-2xl flex items-center justify-center text-2xl flex-shrink-0">
+                    <i class="fa-solid fa-handshake"></i>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-extrabold tracking-tight">Mari Bergerak Bersama!</h3>
+                    <p class="text-xs text-gray-300 mt-1.5 max-w-lg leading-relaxed">Bergabunglah bersama kami dan
+                        menjadi bagian dari perubahan positif di Leuwigoong.</p>
+                </div>
+            </div>
+            <a href="#"
+                class="bg-brand-gold hover:bg-brand-goldHover text-brand-dark font-bold px-8 py-3.5 rounded-xl text-xs shadow-lg shadow-brand-gold/20 transition flex-shrink-0 flex items-center gap-2 relative z-10">
+                Gabung Sekarang <i class="fa-solid fa-chevron-right text-[10px]"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-brand-footer text-gray-400 pt-16 pb-8 text-xs">
+        <div
+            class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-10 pb-12 border-b border-white/5">
+            <!-- Identity -->
+            <div class="space-y-4">
+                <div class="flex items-center gap-3 text-white">
+                    <div
+                        class="w-8 h-8 rounded-lg bg-brand-gold text-brand-dark font-extrabold flex items-center justify-center">
+                        DKR</div>
+                    <span class="font-extrabold text-sm tracking-tight">LEUWIGOONG</span>
+                </div>
+                <p class="leading-relaxed text-gray-400">
+                    Wadah bagi Pramuka Penegak dan Pandega untuk berkarya, berinovasi, dan berdampak nyata bagi
+                    masyarakat.
+                </p>
+                <div class="flex gap-2.5 pt-1">
+                    <a href="#"
+                        class="w-8 h-8 bg-white/5 rounded-lg flex items-center justify-center text-gray-300 hover:text-brand-dark hover:bg-brand-gold transition"><i
+                            class="fa-brands fa-instagram"></i></a>
+                    <a href="#"
+                        class="w-8 h-8 bg-white/5 rounded-lg flex items-center justify-center text-gray-300 hover:text-brand-dark hover:bg-brand-gold transition"><i
+                            class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"
+                        class="w-8 h-8 bg-white/5 rounded-lg flex items-center justify-center text-gray-300 hover:text-brand-dark hover:bg-brand-gold transition"><i
+                            class="fa-brands fa-youtube"></i></a>
+                    <a href="#"
+                        class="w-8 h-8 bg-white/5 rounded-lg flex items-center justify-center text-gray-300 hover:text-brand-dark hover:bg-brand-gold transition"><i
+                            class="fa-brands fa-tiktok"></i></a>
+                </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div>
+                <h4 class="text-white font-bold uppercase tracking-wider mb-4">LINK CEPAT</h4>
+                <ul class="space-y-2.5">
+                    <li><a href="beranda.html" class="hover:text-brand-gold transition">Beranda</a></li>
+                    <li><a href="#" class="hover:text-brand-gold transition">Tentang Kami</a></li>
+                    <li><a href="#" class="hover:text-brand-gold transition">Program Kerja</a></li>
+                    <li><a href="#" class="hover:text-brand-gold transition">Agenda Kegiatan</a></li>
+                    <li><a href="#" class="hover:text-brand-gold transition">Berita & Artikel</a></li>
+                    <li><a href="#" class="hover:text-brand-gold transition">Galeri Foto</a></li>
+                </ul>
+            </div>
+
+            <!-- Info -->
+            <div>
+                <h4 class="text-white font-bold uppercase tracking-wider mb-4">INFORMASI</h4>
+                <ul class="space-y-3">
+                    <li class="flex items-start gap-2.5">
+                        <i class="fa-solid fa-location-dot mt-1 text-brand-gold"></i>
+                        <span>Jl. Raya Leuwigoong No. 123, Leuwigoong, Kabupaten Garut 44192</span>
+                    </li>
+                    <li class="flex items-center gap-2.5">
+                        <i class="fa-solid fa-phone text-brand-gold"></i>
+                        <span>+62 812-3456-7890</span>
+                    </li>
+                    <li class="flex items-center gap-2.5">
+                        <i class="fa-solid fa-envelope text-brand-gold"></i>
+                        <span>dkrleuwigoong@gmail.com</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Instagram Grid -->
+            <div>
+                <h4 class="text-white font-bold uppercase tracking-wider mb-4">GALERI INSTAGRAM</h4>
+                <div class="grid grid-cols-3 gap-2">
+                    <img src="https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?q=80&w=150&auto=format&fit=crop"
+                        class="w-full h-16 object-cover rounded-lg hover:opacity-80 transition cursor-pointer"
+                        alt="Gallery">
+                    <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?q=80&w=150&auto=format&fit=crop"
+                        class="w-full h-16 object-cover rounded-lg hover:opacity-80 transition cursor-pointer"
+                        alt="Gallery">
+                    <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?q=80&w=150&auto=format&fit=crop"
+                        class="w-full h-16 object-cover rounded-lg hover:opacity-80 transition cursor-pointer"
+                        alt="Gallery">
+                    <img src="https://images.unsplash.com/photo-1478131143081-80f7f84ca84d?q=80&w=150&auto=format&fit=crop"
+                        class="w-full h-16 object-cover rounded-lg hover:opacity-80 transition cursor-pointer"
+                        alt="Gallery">
+                    <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?q=80&w=150&auto=format&fit=crop"
+                        class="w-full h-16 object-cover rounded-lg hover:opacity-80 transition cursor-pointer"
+                        alt="Gallery">
+                    <img src="https://images.unsplash.com/photo-1618477461853-cf6ed80faba5?q=80&w=150&auto=format&fit=crop"
+                        class="w-full h-16 object-cover rounded-lg hover:opacity-80 transition cursor-pointer"
+                        alt="Gallery">
+                </div>
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-8 text-center text-gray-500 text-[11px]">
+            &copy; 2026 Dewan Kerja Ranting Leuwigoong. All Rights Reserved.
+        </div>
+    </footer>
+
+    <!-- Mobile Menu Script -->
+    <script>
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+
+</html>

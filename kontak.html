@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="id" class="h-full">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hubungi Kami - Dewan Kerja Ranting Leuwigoong</title>
+
+    <!-- Google Fonts: Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            gold: '#E09F27',
+                            'gold-hover': '#C6871A',
+                            dark: '#16120B',
+                            'dark-card': '#1E1810',
+                            card: '#FAF7F2',
+                            footer: '#110D07',
+                            bg: '#F5F2EB'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-brand-bg text-gray-800 font-sans flex flex-col min-h-full antialiased">
+
+    <!-- NAVBAR -->
+    <nav class="sticky top-0 z-40 bg-brand-dark/95 backdrop-blur-md border-b border-white/5 py-3">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="beranda.html" class="flex items-center gap-3">
+                <img src="assets/img/dkr-logo.png" alt="Logo DKR Leuwigoong"
+                    class="w-10 h-10 object-contain drop-shadow-md"
+                    onerror="this.onerror=null; this.src='https://via.placeholder.com/40?text=DKR';">
+                <div>
+                    <span
+                        class="block text-[10px] font-semibold text-amber-500 uppercase tracking-widest leading-none">Dewan
+                        Kerja Ranting</span>
+                    <span
+                        class="block text-lg font-extrabold text-white tracking-tight leading-tight mt-0.5">LEUWIGOONG</span>
+                </div>
+            </a>
+
+            <!-- Nav Links -->
+            <div class="hidden md:flex items-center space-x-6 text-xs uppercase font-semibold text-gray-300">
+                <a href="beranda.html" class="hover:text-brand-gold transition-colors">Beranda</a>
+                <a href="tentang.html" class="hover:text-brand-gold transition-colors">Tentang</a>
+                <a href="program.html" class="hover:text-brand-gold transition-colors">Program</a>
+                <a href="agenda.html" class="hover:text-brand-gold transition-colors">Agenda</a>
+                <a href="berita.html" class="hover:text-brand-gold transition-colors">Berita</a>
+                <a href="galeri.html" class="hover:text-brand-gold transition-colors">Galeri</a>
+                <a href="kontak.html" class="text-brand-gold relative py-1 border-b-2 border-brand-gold">Kontak</a>
+            </div>
+
+            <!-- CTA -->
+            <div class="hidden md:block">
+                <a href="gabung.html"
+                    class="px-5 py-2.5 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-brand-dark hover:text-white font-bold text-xs rounded-xl shadow-md transition-all hover:-translate-y-0.5">
+                    Gabung Bersama Kami
+                </a>
+            </div>
+
+            <!-- Mobile Button -->
+            <button id="mobile-menu-btn" class="md:hidden text-gray-300 hover:text-white text-xl focus:outline-none">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu"
+            class="hidden md:hidden px-4 pt-3 pb-4 space-y-2 border-t border-white/10 mt-2 text-xs font-semibold uppercase text-gray-300">
+            <a href="beranda.html" class="block py-2 hover:text-brand-gold">Beranda</a>
+            <a href="tentang.html" class="block py-2 hover:text-brand-gold">Tentang</a>
+            <a href="program.html" class="block py-2 hover:text-brand-gold">Program</a>
+            <a href="agenda.html" class="block py-2 hover:text-brand-gold">Agenda</a>
+            <a href="berita.html" class="block py-2 hover:text-brand-gold">Berita</a>
+            <a href="galeri.html" class="block py-2 hover:text-brand-gold">Galeri</a>
+            <a href="kontak.html" class="block py-2 text-brand-gold">Kontak</a>
+            <a href="#" class="block text-center mt-3 py-2.5 bg-brand-gold text-brand-dark font-bold rounded-xl">Gabung
+                Bersama Kami</a>
+        </div>
+    </nav>
+
+    <!-- HEADER PAGE -->
+    <header
+        class="relative bg-gradient-to-b from-brand-dark/90 to-brand-dark/95 text-white py-16 px-4 sm:px-6 lg:px-8 text-center bg-cover bg-center"
+        style="background-image: linear-gradient(180deg, rgba(22, 18, 11, 0.88) 0%, rgba(22, 18, 11, 0.96) 100%), url('https://images.unsplash.com/photo-1423666639041-f56000c27a9a?q=80&w=1600&auto=format&fit=crop');">
+        <div class="max-w-3xl mx-auto">
+            <span
+                class="inline-block px-3 py-1 bg-amber-500/20 text-amber-400 uppercase tracking-widest font-bold text-[11px] rounded-md mb-3">
+                Pusat Layanan & Komunikasi
+            </span>
+            <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-3 tracking-tight">Hubungi Kami</h1>
+            <p class="text-gray-300 text-sm sm:text-base max-w-xl mx-auto">
+                Punya pertanyaan seputar keanggotaan, kerja sama program, atau informasi Ambalan? Sanggar DKR Leuwigoong
+                siap melayani Anda.
+            </p>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main class="flex-grow py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-12">
+
+                <!-- CONTACT INFO CARDS -->
+                <div class="lg:col-span-5 space-y-6">
+                    <div>
+                        <span class="text-amber-600 font-bold text-xs uppercase tracking-wider block mb-1">Informasi
+                            Sekretariat</span>
+                        <h2 class="text-2xl font-extrabold text-gray-900 mb-3">Sanggar Bakti DKR Leuwigoong</h2>
+                        <p class="text-xs text-gray-600 leading-relaxed mb-6">
+                            Silakan hubungi kami melalui kanal komunikasi resmi di bawah atau kunjungi Sanggar Bakti
+                            pada jam operasional.
+                        </p>
+                    </div>
+
+                    <!-- Cards -->
+                    <div class="space-y-4">
+                        <div
+                            class="p-5 bg-white rounded-2xl border border-gray-200/80 shadow-sm flex items-start gap-4 hover:border-brand-gold transition-colors">
+                            <div
+                                class="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-600 flex items-center justify-center shrink-0 text-lg">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900 text-sm mb-1">Alamat Sanggar</h4>
+                                <p class="text-xs text-gray-600 leading-relaxed">
+                                    Sekretariat Kwarran Leuwigoong, Jl. Raya Leuwigoong-Garut, Kecamatan Leuwigoong,
+                                    Kabupaten Garut, Jawa Barat 44192
+                                </p>
+                            </div>
+                        </div>
+
+                        <div
+                            class="p-5 bg-white rounded-2xl border border-gray-200/80 shadow-sm flex items-start gap-4 hover:border-brand-gold transition-colors">
+                            <div
+                                class="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-600 flex items-center justify-center shrink-0 text-lg">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900 text-sm mb-1">Surat & Email Resmi</h4>
+                                <p class="text-xs text-gray-600 mb-1">dkrleuwigoong15@gmail.com</p>
+                                <p class="text-[11px] text-gray-400">Gunakan email ini untuk permohonan rekomendasi &
+                                    kerja sama.</p>
+                            </div>
+                        </div>
+
+                        <div
+                            class="p-5 bg-white rounded-2xl border border-gray-200/80 shadow-sm flex items-start gap-4 hover:border-brand-gold transition-colors">
+                            <div
+                                class="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-600 flex items-center justify-center shrink-0 text-lg">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900 text-sm mb-1">Telepon / WhatsApp Admin</h4>
+                                <p class="text-xs text-gray-600 mb-1">+62 897-9870-446 (Humas DKR)</p>
+                                <p class="text-xs text-gray-600">+62 858-6147-0481 (Sekretariat)</p>
+                            </div>
+                        </div>
+
+                        <div
+                            class="p-5 bg-white rounded-2xl border border-gray-200/80 shadow-sm flex items-start gap-4 hover:border-brand-gold transition-colors">
+                            <div
+                                class="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-600 flex items-center justify-center shrink-0 text-lg">
+                                <i class="fa-regular fa-clock"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900 text-sm mb-1">Jam Operasional Sanggar</h4>
+                                <p class="text-xs text-gray-600">Jumat & Sabtu: 13.00 - 17.00 WIB</p>
+                                <p class="text-xs text-gray-600">Minggu: 09.00 - 16.00 WIB</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CONTACT FORM -->
+                <div class="lg:col-span-7">
+                    <div class="bg-white rounded-3xl border border-gray-200/80 shadow-md p-6 sm:p-8">
+                        <div class="mb-6">
+                            <h3 class="text-xl font-extrabold text-gray-900 mb-1">Kirim Pesan atau Pertanyaan</h3>
+                            <p class="text-xs text-gray-500">Isi formulir di bawah ini, tim Sekretariat DKR Leuwigoong
+                                akan merespons secepat mungkin.</p>
+                        </div>
+
+                        <form onsubmit="handleContactSubmit(event)" class="space-y-4">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label
+                                        class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-1.5">Nama
+                                        Lengkap *</label>
+                                    <input type="text" required
+                                        class="w-full px-4 py-2.5 bg-gray-50 border border-gray-200 rounded-xl text-xs focus:outline-none focus:border-brand-gold focus:bg-white transition-all">
+                                </div>
+                                <div>
+                                    <label
+                                        class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-1.5">Alamat
+                                        Email *</label>
+                                    <input type="email" required
+                                        class="w-full px-4 py-2.5 bg-gray-50 border border-gray-200 rounded-xl text-xs focus:outline-none focus:border-brand-gold focus:bg-white transition-all">
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label
+                                        class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-1.5">Pangkalan
+                                        / Ambalan</label>
+                                    <input type="text"
+                                        class="w-full px-4 py-2.5 bg-gray-50 border border-gray-200 rounded-xl text-xs focus:outline-none focus:border-brand-gold focus:bg-white transition-all">
+                                </div>
+                                <div>
+                                    <label
+                                        class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-1.5">Kategori
+                                        Pertanyaan</label>
+                                    <select
+                                        class="w-full px-4 py-2.5 bg-gray-50 border border-gray-200 rounded-xl text-xs text-gray-700 focus:outline-none focus:border-brand-gold focus:bg-white transition-all">
+                                        <option value="umum">Informasi Umum</option>
+                                        <option value="kegiatan">Kegiatan & Agenda</option>
+                                        <option value="rekomendasi">Surat Rekomendasi / KTA</option>
+                                        <option value="kerjasama">Kerja Sama / Partnership</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label
+                                    class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-1.5">Subjek
+                                    Pesan *</label>
+                                <input type="text" required
+                                    class="w-full px-4 py-2.5 bg-gray-50 border border-gray-200 rounded-xl text-xs focus:outline-none focus:border-brand-gold focus:bg-white transition-all">
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-1.5">Isi
+                                    Pesan *</label>
+                                <textarea required rows="5"
+                                    class="w-full px-4 py-2.5 bg-gray-50 border border-gray-200 rounded-xl text-xs focus:outline-none focus:border-brand-gold focus:bg-white transition-all"></textarea>
+                            </div>
+
+                            <button type="submit"
+                                class="w-full py-3 bg-brand-dark hover:bg-amber-600 text-brand-gold hover:text-brand-dark font-extrabold text-xs uppercase tracking-wider rounded-xl shadow-md transition-all">
+                                <i class="fa-solid fa-paper-plane mr-2"></i> Kirim Pesan Sekarang
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- MAP SECTION -->
+            <div class="bg-white rounded-3xl border border-gray-200/80 shadow-md p-4 sm:p-6 overflow-hidden">
+                <div class="flex flex-col sm:flex-row justify-between sm:items-center mb-4 gap-2">
+                    <div>
+                        <h3 class="font-extrabold text-gray-900 text-base">Lokasi Sanggar Bakti</h3>
+                        <p class="text-xs text-gray-500">Peta petunjuk menuju Sanggar Dewan Kerja Ranting Leuwigoong.
+                        </p>
+                    </div>
+                    <a href="https://maps.app.goo.gl/qMuEn6QH6U8hWZW2A" target="_blank"
+                        class="px-3 py-1.5 bg-gray-100 hover:bg-brand-gold hover:text-brand-dark text-gray-700 font-semibold text-xs rounded-lg transition-all inline-flex items-center w-max">
+                        Buka di Google Maps <i class="fa-solid fa-up-right-from-square ml-1.5 text-[10px]"></i>
+                    </a>
+                </div>
+
+                <div class="w-full h-80 rounded-2xl overflow-hidden bg-gray-200 border border-gray-100 relative">
+                    <iframe
+                        src="https://www.google.com/maps?q=-7.106735,107.955518&output=embed"
+                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-brand-footer text-gray-400 text-xs py-10 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 pb-8 border-b border-white/10">
+                <div>
+                    <div class="flex items-center gap-2 mb-3">
+                        <img src="assets/img/dkr-logo.png" alt="Logo DKR" class="w-7 h-7 object-contain"
+                            onerror="this.onerror=null; this.src='https://via.placeholder.com/30?text=DKR';">
+                        <span class="font-extrabold text-white text-sm">LEUWIGOONG</span>
+                    </div>
+                    <p class="text-gray-400 leading-relaxed">
+                        Wadah bagi Pramuka Penegak dan Pandega untuk berkarya, berinovasi, dan berdampak nyata bagi
+                        masyarakat.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold uppercase tracking-wider mb-3">Kontak Kami</h4>
+                    <ul class="space-y-2">
+                        <li><i class="fa-solid fa-location-dot text-amber-500 mr-2"></i>Jl. Raya Leuwigoong No. 123,
+                            Garut 44192</li>
+                        <li><i class="fa-solid fa-phone text-amber-500 mr-2"></i>+62 812-3456-7890</li>
+                        <li><i class="fa-solid fa-envelope text-amber-500 mr-2"></i>dkrleuwigoong@gmail.com</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold uppercase tracking-wider mb-3">Media Sosial</h4>
+                    <div class="flex gap-2">
+                        <a href="#"
+                            class="w-8 h-8 rounded-lg bg-white/5 flex items-center justify-center text-gray-300 hover:bg-brand-gold hover:text-brand-dark transition-all"><i
+                                class="fa-brands fa-instagram"></i></a>
+                        <a href="#"
+                            class="w-8 h-8 rounded-lg bg-white/5 flex items-center justify-center text-gray-300 hover:bg-brand-gold hover:text-brand-dark transition-all"><i
+                                class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"
+                            class="w-8 h-8 rounded-lg bg-white/5 flex items-center justify-center text-gray-300 hover:bg-brand-gold hover:text-brand-dark transition-all"><i
+                                class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="pt-6 text-center text-gray-500 text-[11px]">
+                &copy; 2026 Dewan Kerja Ranting Leuwigoong. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- SCRIPT -->
+    <script>
+        function handleContactSubmit(e) {
+            e.preventDefault();
+            alert('Terima kasih! Pesan Anda telah terkirim. Tim Sekretariat DKR Leuwigoong akan merespons pesan Anda secepatnya.');
+            e.target.reset();
+        }
+
+        document.getElementById('mobile-menu-btn').addEventListener('click', () => {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
+</body>
+
+</html>
